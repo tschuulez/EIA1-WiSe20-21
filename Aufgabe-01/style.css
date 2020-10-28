@@ -26,12 +26,12 @@ a {
     
 }
  a:link, a:visited{
-    background-color: grey(50%);
+    background-color: lightgray(0.5);
     padding: 10px 15px ;
     text-decoration: none;
     display: inline-block;
     
 }
 a:hover, a:active {
-    background-color: grey(50%);
+    background-color: lightgray(0.5);
 }
