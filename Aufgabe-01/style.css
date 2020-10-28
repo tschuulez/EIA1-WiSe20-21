@@ -3,8 +3,14 @@ body {
     background-color: black;
     text-align: center;
     color: whitesmoke;
+    font-family: fantasy;
 }
 h1 {
+    color: whitesmoke;
+    text-align: center;
+    font-family: fantasy;
+}
+h3 {
     color: whitesmoke;
     text-align: center;
     font-family: fantasy;
@@ -17,5 +23,5 @@ a {
     color: whitesmoke;
     font-family: fantasy;
     text-align: center;
-    
+
 }
