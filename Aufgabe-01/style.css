@@ -23,5 +23,10 @@ a {
     color: whitesmoke;
     font-family: 'Courier New', Courier, monospace;
     text-align: center;
+    
+}
+a:hover {
+    color: grey(50%)
+    
 
 }
