@@ -25,13 +25,6 @@ a {
     text-align: center;
     
 }
- a:link, a:visited{
-    background-color: lightgray(0.5);
-    padding: 10px 15px ;
-    text-decoration: none;
-    display: inline-block;
-    
-}
-a:hover, a:active {
-    background-color: lightgray(0.5);
-}
+ a img:hover{
+     box-shadow: lightgray(0.5);
+ }
