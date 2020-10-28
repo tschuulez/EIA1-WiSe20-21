@@ -3,12 +3,12 @@ body {
     background-color: black;
     text-align: center;
     color: whitesmoke;
-    font-family: fantasy;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 h1 {
     color: whitesmoke;
     text-align: center;
-    font-family: fantasy;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 h3 {
     color: whitesmoke;
