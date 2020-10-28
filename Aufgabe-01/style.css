@@ -27,8 +27,7 @@ a {
 }
 a:hover, a:active {
     background-color: white(0.5);
-    padding: 14px 20px;
-    display: inline;
+   
     
 
 }
