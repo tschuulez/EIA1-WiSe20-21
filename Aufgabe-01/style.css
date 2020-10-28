@@ -26,13 +26,12 @@ a {
     
 }
  a:link, a:visited{
-    background-color: grey;
-    color: grey;
-    padding: 14px 20px;
+    background-color: grey(50%);
+    padding: 10px 15px ;
     text-decoration: none;
     display: inline-block;
     
 }
 a:hover, a:active {
-    background-color: grey;
+    background-color: grey(50%);
 }
