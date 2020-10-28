@@ -12,3 +12,10 @@ h1 {
 ul {
     list-style: none;
 }
+a {
+    text-decoration: none;
+    color: whitesmoke;
+    font-family: fantasy;
+    text-align: center;
+    
+}
