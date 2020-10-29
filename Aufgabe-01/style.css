@@ -1,6 +1,6 @@
 
 
-#h1-headline {
+#headline {
     color: whitesmoke;
     text-align: center;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -9,25 +9,25 @@
 } 
     body {
     
-        background-color: black;
+        background-color: grey;
         text-align: center;
         color: whitesmoke;
         font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-        font-size: 20px;
+        
     }
-h3 {
+h3, ul, p {
     color: whitesmoke;
     text-align: center;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
-ul {
     list-style: none;
 }
+
 a  {
-    box-shadow: lightgray(0.5);
+    box-shadow: lightgray;
+    opacity: 0.3;
     text-decoration: none;
     color: whitesmoke;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     text-align: center;
-    
+    position: right top;
 }
