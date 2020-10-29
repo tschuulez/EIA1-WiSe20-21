@@ -5,10 +5,11 @@ body {
     color: whitesmoke;
     font-family: 'Courier New', Courier, monospace;
 }
-h1 {
+.h1-headline {
     color: whitesmoke;
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
+    font-size: xx-large;
 }
 h3 {
     color: whitesmoke;
