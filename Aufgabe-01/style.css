@@ -1,20 +1,24 @@
-body {
+
+
+#h1-headline {
+    color: whitesmoke;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 200px;
+    font-weight: bolder;
+} 
+    body {
     
-    background-color: black;
-    text-align: center;
-    color: whitesmoke;
-    font-family: 'Courier New', Courier, monospace;
-}
-.h1-headline {
-    color: whitesmoke;
-    text-align: center;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: xx-large;
-}
+        background-color: black;
+        text-align: center;
+        color: whitesmoke;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 20px;
+    }
 h3 {
     color: whitesmoke;
     text-align: center;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 ul {
     list-style: none;
@@ -23,7 +27,7 @@ a  {
     box-shadow: lightgray(0.5);
     text-decoration: none;
     color: whitesmoke;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     text-align: center;
     
 }
