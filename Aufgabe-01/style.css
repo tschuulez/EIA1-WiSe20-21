@@ -23,12 +23,14 @@ h3, ul, p {
 }
 
 a:link  {
-   
-   
-}
-a:visited {
+   text-decoration: none;
+   color: black;
+   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 
 }
-a:hover{ 
-    
+a:visited {
+   text-decoration: none;
+   color: whitesmoke;
+   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
 }
