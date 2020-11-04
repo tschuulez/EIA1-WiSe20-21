@@ -9,7 +9,7 @@ div {
 }
 .circle{
     position: absolute;
-    background: cornflowerblue;
+    background: dimgray;
     border-radius: 50%;
     height: 1100px;
     width: 1100px;
@@ -62,7 +62,7 @@ body{
         right: 20%;
     }
     h2{
-        color: cornflowerblue;
+        color: dimgray;
         text-align: center;
     }
  ul, p {
@@ -73,18 +73,17 @@ body{
 }
 
 .circle-content{ 
-   
-    
-    text-align: center;
+   text-align: center;
 }
 a{
     text-decoration: none;
     text-align: center;
+    color:dimgray;
     
 
 }
 a:hover{ 
-    color: cornflowerblue;
+    color: grey;
     transition: 0,4;
 }
 .navbar  {
@@ -100,7 +99,7 @@ a:hover{
 
 }
 .currentpage{
-    color: cornflowerblue;
+    color: dimgray;
 }
 
 .link {
