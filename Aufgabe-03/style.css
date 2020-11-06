@@ -38,7 +38,11 @@
     opacity: 100%;
 }
 
-
+.mountain_icon{
+    position: absolute;
+    top: 53%;
+    left: 32%;
+}
 
 .headline {
     position: absolute;
