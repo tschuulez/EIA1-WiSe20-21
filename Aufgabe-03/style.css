@@ -138,12 +138,12 @@ form{
 }
 
 input{
-    background-color: white;
+    background-color: grey;
     font-size: larger;
 
 }
 ::placeholder{
-    color: grey;
+    color: white;
     font-size: small;
     padding-top: 0;
     padding-left: 0;
