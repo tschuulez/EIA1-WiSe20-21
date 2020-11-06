@@ -19,10 +19,20 @@
 #icon{
     position: absolute;
     opacity: 0.7;
-    top: 60%;
+    top: 70%;
     left: 65%;
     right: 20%;
     
+}
+#icon2{
+    position: absolute;
+    opacity: 0.7;
+    top: 70%;
+    left: 70%;
+    right: 25%;
+}
+#icon2:hover{
+    opacity: 100%;
 }
 #icon:hover{
     opacity: 100%;
@@ -40,9 +50,16 @@
     font-size: 200px;
     font-weight: bolder;
    
-    
-    
 } 
+.subtitle{
+    position: absolute;
+    top: 55%;
+    left: 40% ;
+    color: whitesmoke;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 20px;
+    font-weight: 100;
+}
 body{
     background-image: url(https://raw.githubusercontent.com/gabriel-rausch/EIA1-Material/master/L03/task_material/images/bg.png);
     text-align: center;
@@ -63,7 +80,8 @@ body{
     }
     h2{
         color: dimgray;
-        text-align: center;
+        text-align: left;
+        
     }
  ul, p {
     color: black;
@@ -93,8 +111,6 @@ a:hover{
     padding: 2px;
     padding-left: 5px; 
     background-color: black;
-
-
 }
 .currentpage{
     color: dimgray;
@@ -102,8 +118,41 @@ a:hover{
 
 .link {
     color: whitesmoke;
+}
+form{
+    text-align: left;
+    font-size: larger;
+    margin: auto;
 
 }
 
+input{
+    background-color: white;
+    font-size: larger;
 
-
+}
+::placeholder{
+    color: grey;
+    font-size: small;
+    padding-top: 0;
+    padding-left: 0;
+    padding-bottom: 9px;
+    
+}
+.text{
+    font-size: 12px;
+}
+.nachricht{
+    padding: 40px;
+    padding-top: 0;
+    padding-left: 0;
+}
+.button{
+    background-color: gray;
+    color: whitesmoke;
+}
+.button:hover{
+    
+    background-color: black;
+    opacity: 0.8;
+}
