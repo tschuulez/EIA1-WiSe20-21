@@ -62,7 +62,7 @@
 }
 body{
     background-image: url(https://raw.githubusercontent.com/gabriel-rausch/EIA1-Material/master/L03/task_material/images/bg.png);
-    text-align: center;
+    text-align: left;
         color: black;
         font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 
@@ -83,11 +83,15 @@ body{
         text-align: left;
         
     }
- ul, p {
+ ul {
     color: black;
     text-align: left;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     list-style: none;
+    padding: 0;
+}
+p{
+    color: white;
 }
 
 a{
