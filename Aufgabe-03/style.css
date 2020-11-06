@@ -108,7 +108,11 @@ a:hover{
     top: 0;
     right: 50px;
     background-color: black;
-    
+    padding: 150px;
+    padding-top: 0;
+    padding-bottom: 1px;
+    padding-left: 50px;
+    padding-right: 50px;
 }
 .currentpage{
     color: dimgray;
