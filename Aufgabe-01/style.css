@@ -22,8 +22,12 @@ h3, ul, p {
 a{
     text-decoration: none;
     text-align: center;
+    color: whitesmoke;
     
 
+}
+a:hover{
+    color: darkgreen;
 }
 .navbar  {
     position: sticky;
