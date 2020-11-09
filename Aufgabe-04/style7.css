@@ -1,0 +1,85 @@
+.flexbox{ 
+
+    width: 600px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    text-align: left;
+}
+body{
+    background-image: url(./assets/Material7/bg.png);
+}
+.card{
+    position: relative;
+    background-image: url(./assets/Material7/container.png);
+    top: 200px;
+    left: 40px;
+}
+h1{
+    position: absolute;
+    top: 40px;
+    left: 65px;
+    color: whitesmoke;
+}
+p{
+    position: absolute;
+    display: block;
+    color: whitesmoke;
+    left: 60px;
+    top: 150px;
+}
+.paragraph{
+    position: absolute;
+    top: 190px;
+    left: 60px;
+}
+h4{
+    position: absolute;
+    top: 220px;
+    left: 60px;
+    color: whitesmoke;
+}
+h4 + p{
+    position: absolute;
+    top: 250px;
+    left: 60px;
+    font-style: italic;
+    font-family: fantasy;
+}
+.plant{
+    position: absolute;
+    top: -50px;
+    left: -70px;
+}
+#gifts{
+    position: absolute;
+    bottom: -15px;
+    right: -10px;
+}
+video{
+    position: absolute;
+    top: 25px;
+    right: 25px;
+
+}
+.sparkle1{
+    position: absolute;
+    top: 270px;
+    left: 130px;
+}
+.sparkle2{
+    position: absolute;
+    top: 200px;
+    left: 200px;
+}
+.sparkle3{
+    position: absolute;
+    top: 230px;
+    left: 280px;
+}
+.sparkle4{
+    position: absolute;
+    top: 290px;
+    left: 220px;
+}
