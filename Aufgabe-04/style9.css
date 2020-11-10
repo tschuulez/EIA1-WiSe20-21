@@ -56,14 +56,13 @@ h4 + p{
     position: absolute;
     top: 0;
     right: 80px;
-    opacity: 0;
-    transition-property: opacity;
-    transition-duration: 10s;
+    
+    
+    
 
-   
-    transition-delay: 0.1s;
     animation-duration: 8s;
     animation-delay: 0s;
+    animation-fill-mode: forwards;
     animation-name: slidein;
     animation-iteration-count: infinite;
 }
@@ -84,9 +83,8 @@ h4 + p{
     opacity: 0;
     transition-property: opacity;
     transition-duration: 10s;
-
-   
     transition-delay: 0.2s;
+
     animation-delay: 0.5s;
     animation-duration: 8s;
     animation-name: slidein2;
@@ -109,9 +107,8 @@ h4 + p{
     opacity: 0;
     transition-property: opacity;
     transition-duration: 10s;
-
-   
     transition-delay: 1s;
+
     animation-duration: 8s;
     animation-delay: 1.5s;
     animation-name: slidein3;
@@ -135,9 +132,8 @@ h4 + p{
     opacity: 0;
     transition-property: opacity;
     transition-duration: 10s;
-
-   
     transition-delay: 1s;
+
     animation-duration: 8s;
     animation-delay: 1s;
     animation-name: slidein4;
