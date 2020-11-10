@@ -7,3 +7,150 @@
     margin: auto;
     text-align: left;
 }
+body{
+    background-image: url("assets/Material9/bg.png");
+}
+.card{
+    position: relative;
+    background-image: url("assets/Material9/wrapperbg.png");
+    top: 200px;
+    left: 40px;
+}
+h1{
+    position: absolute;
+    top: 40px;
+    left: 80px;
+    color: whitesmoke;
+}
+p{
+    position: absolute;
+    display: block;
+    color: whitesmoke;
+    left: 60px;
+    top: 150px;
+}
+.paragraph{
+    position: absolute;
+    top: 190px;
+    left: 60px;
+}
+h4{
+    position: absolute;
+    top: 220px;
+    left: 60px;
+    color: whitesmoke;
+}
+h4 + p{
+    position: absolute;
+    top: 250px;
+    left: 60px;
+    font-style: italic;
+    font-family: fantasy;
+}
+.banderole{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+.snow1{
+    position: absolute;
+    top: 0;
+    right: 80px;
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 10s;
+
+   
+    transition-delay: 0.1s;
+    animation-duration: 8s;
+    animation-delay: 0s;
+    animation-name: slidein;
+    animation-iteration-count: infinite;
+}
+@keyframes slidein {
+    from{
+        top: 0;
+        right: 80px;
+    }
+    to{
+        top: 360px;
+        right: 80px;
+    }
+}
+.snow2{
+    position: absolute;
+    top: 0;
+    left: 40px;
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 10s;
+
+   
+    transition-delay: 0.2s;
+    animation-delay: 0.5s;
+    animation-duration: 8s;
+    animation-name: slidein2;
+    animation-iteration-count: infinite;
+}
+@keyframes slidein2 {
+    from{
+        top: 0;
+        left: 40px;
+    }
+    to{
+        top: 360px;
+        left: 40px;
+    }
+}
+.snow3{
+    position: absolute;
+    top: 0;
+    left: 200px;
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 10s;
+
+   
+    transition-delay: 1s;
+    animation-duration: 8s;
+    animation-delay: 1.5s;
+    animation-name: slidein3;
+    animation-iteration-count: infinite;
+   
+}   
+@keyframes slidein3 {
+    from{
+        top: 0;
+        left: 200px;
+    }
+    to{
+        top: 360px;
+        left: 200px;
+    }
+}
+.snow4{
+    position: absolute;
+    top: 0;
+    left: 300px;
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 10s;
+
+   
+    transition-delay: 1s;
+    animation-duration: 8s;
+    animation-delay: 1s;
+    animation-name: slidein4;
+    animation-iteration-count: infinite;
+   
+}
+@keyframes slidein4 {
+    from{
+        top: 0;
+        left: 300px;
+    }
+    to{
+        top: 360px;
+        left: 300px;
+    }
+}
