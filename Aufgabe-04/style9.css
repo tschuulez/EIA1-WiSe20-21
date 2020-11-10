@@ -62,7 +62,7 @@ h4 + p{
 
     animation-duration: 8s;
     animation-delay: 0s;
-    animation-fill-mode: forwards;
+    
     animation-name: slidein;
     animation-iteration-count: infinite;
 }
@@ -70,20 +70,20 @@ h4 + p{
     from{
         top: 0;
         right: 80px;
+        opacity: 1;
+        
     }
     to{
         top: 360px;
         right: 80px;
+        opacity: 0;
     }
 }
 .snow2{
     position: absolute;
     top: 0;
     left: 40px;
-    opacity: 0;
-    transition-property: opacity;
-    transition-duration: 10s;
-    transition-delay: 0.2s;
+    
 
     animation-delay: 0.5s;
     animation-duration: 8s;
@@ -94,10 +94,12 @@ h4 + p{
     from{
         top: 0;
         left: 40px;
+        opacity: 1;
     }
     to{
         top: 360px;
         left: 40px;
+        opacity: 0;
     }
 }
 .snow3{
@@ -105,9 +107,7 @@ h4 + p{
     top: 0;
     left: 200px;
     opacity: 0;
-    transition-property: opacity;
-    transition-duration: 10s;
-    transition-delay: 1s;
+   
 
     animation-duration: 8s;
     animation-delay: 1.5s;
@@ -119,10 +119,12 @@ h4 + p{
     from{
         top: 0;
         left: 200px;
+        opacity: 1;
     }
     to{
         top: 360px;
         left: 200px;
+        opacity: 0;
     }
 }
 .snow4{
@@ -130,9 +132,7 @@ h4 + p{
     top: 0;
     left: 300px;
     opacity: 0;
-    transition-property: opacity;
-    transition-duration: 10s;
-    transition-delay: 1s;
+   
 
     animation-duration: 8s;
     animation-delay: 1s;
@@ -144,9 +144,11 @@ h4 + p{
     from{
         top: 0;
         left: 300px;
+        opacity: 1;
     }
     to{
         top: 360px;
         left: 300px;
+        opacity: 0;
     }
 }
