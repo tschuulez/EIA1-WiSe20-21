@@ -8,11 +8,11 @@
     text-align: left;
 }
 body{
-    background-image: url(./assets/Material3/bg.png);
+    background-image: url("./assets/Material3/bg.png");
 }
 .card{
     position: relative;
-    background-image: url(./assets/Material3/wrapperbg.png);
+    background-image: url("./assets/Material3/wrapperbg.png");
     top: 200px;
     left: 40px;
 }
@@ -69,5 +69,5 @@ h4 + p{
     right: 220px;
 }
 img:hover{
-    background-image: url(./assets/Material3/stern_hover.png);
+    background-image: url("./assets/Material3/stern_hover.png");
 }

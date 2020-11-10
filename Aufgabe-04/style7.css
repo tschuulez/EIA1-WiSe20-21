@@ -8,11 +8,11 @@
     text-align: left;
 }
 body{
-    background-image: url(./assets/Material7/bg.png);
+    background-image: url("./assets/Material7/bg.png");
 }
 .card{
     position: relative;
-    background-image: url(./assets/Material7/container.png);
+    background-image: url("./assets/Material7/container.png");
     top: 200px;
     left: 40px;
 }

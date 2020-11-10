@@ -8,11 +8,38 @@
     text-align: left;
 }
 body{
-    background-image: url();
+    background-image: url("assets/Material5/bg.png");
 }
 .card{
     position: relative;
-    background-image: url();
+    background-image: url("assets/Material5/wrapperbg.png");
     top: 200px;
     left: 40px;
+}
+h1{
+    position: absolute;
+    top: 20px;
+    left: 40px;
+    color: whitesmoke;
+    font-size: x-large;
+}
+.formular{
+    position: absolute;
+    display: block;
+    top: 70px;
+    left: 40px;
+}
+p{
+    
+    display: block;
+    color: whitesmoke;
+}
+label{
+    color: whitesmoke;
+    display: inline;
+}
+.nachricht{
+    padding: 40px;
+    padding-top: 0;
+    padding-left: 0;
 }

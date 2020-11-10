@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +10,31 @@
     <div class="flexbox card" >
         
           <h1>Dein Brief an den Weihnachtsmann</h1>
-          
-        </div>
+          <div class="formular">
+             <form action="messages.html" method="GET">
+                <label>
+                   <p>Dein Name:</p>
+                   <input type="text" name="Name" id="firstname"> 
+                </label>
+            
+                <label> 
+                   <p>Deine Nachricht:</p>
+                   <input class="nachricht" type="text" name="Nachricht"> 
+                </label>
+               
+                <div>
+                    <p>Willst du auch weiße Weihnachten?</p>
+                      <div>
+                          <label for="yes">ja</label>
+                          <input class="choice" type="radio" name="Willst du auch weiße Weihnachten?" id="yes"> 
+                     
+                          <label for="no">nein</label>
+                          <input class="choice" type="radio" name="Willst du auch weiße Weihnachten?" id="no"> 
+                     </div>
+                </div>   
+               
+                 <p><button class="button" type="submit">Absenden</button></p>
+         </div>  
+    </div>
 </body>
 </html>
