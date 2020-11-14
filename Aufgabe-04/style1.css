@@ -1,20 +1,21 @@
 body{ 
     background-image: url("./assets/Material1/bg.png");
 }
+
 .flexbox{ 
-    position: relative;
+
     width: 600px;
     height: 400px;
     display: flex;
     flex-direction: column;
-    transform: translate(50%,50%);
-   
-    
+    margin: auto;
+    text-align: left;
 }
-.card {
+.card{
     position: relative;
     background-image: url("./assets/Material1/wrapperbg.png");
-    transform: translate(50%,50%);
+    top: 200px;
+    left: 40px;
 }
 .plant{
     position: absolute;
