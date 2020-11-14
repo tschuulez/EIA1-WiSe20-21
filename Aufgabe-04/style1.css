@@ -2,19 +2,19 @@ body{
     background-image: url("./assets/Material1/bg.png");
 }
 .flexbox{ 
-
+    position: relative;
     width: 600px;
     height: 400px;
     display: flex;
     flex-direction: column;
-    margin: auto;
-    text-align: left;
+    transform: translate(50%,50%);
+   
+    
 }
 .card {
     position: relative;
     background-image: url("./assets/Material1/wrapperbg.png");
-    top: 200px;
-    left: 40px;
+    transform: translate(50%,50%);
 }
 .plant{
     position: absolute;
