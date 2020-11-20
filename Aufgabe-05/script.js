@@ -11,28 +11,40 @@ var asia18 = 16274.1;
 var australia08 = 1993;
 var australia18 = 2100.5;
 var total = africa18 + southAmerica18 + europe18 + northAmerica18 + asia18 + australia18;
-console.log("Africa produces " + africa18 + "kg CO2");
-console.log("Africa contributes relatively " + Math.round(africa18 / total * 100) + "% Carbon Dioxide to the world's total emission");
-console.log("Africa's emission from 2018 has changed by " + Math.round(africa18 / africa08 * 100) + "% since 2008");
-console.log("That is a growth rate of approximately  " + Math.round(africa18 - africa08) + "kg CO2");
-console.log("South America produces " + southAmerica18 + "kg CO2");
-console.log("South America contributes relatively " + Math.round(southAmerica18 / total * 100) + "% Carbon Dioxide to the world's total emission");
-console.log("South America's emission from 2018 has changed by " + Math.round(southAmerica18 / southAmerica08 * 100) + "% since 2008");
-console.log("That is a growth rate of approximately  " + Math.round(southAmerica18 - southAmerica08) + "kg CO2");
-console.log("Europe produces " + europe18 + "kg CO2");
-console.log("Europe contributes relatively " + Math.round(europe18 / total * 100) + "% Carbon Dioxide to the world's total emission");
-console.log("Europe's emission from 2018 has changed by " + Math.round(europe18 / europe08 * 100) + "% since 2008");
-console.log("That is a growth rate of approximately  " + Math.round(europe18 - europe08) + "kg CO2");
-console.log("North America produces " + northAmerica18 + "kg CO2");
-console.log("North America contributes relatively " + Math.round(northAmerica18 / total * 100) + "% Carbon Dioxide to the world's total emission");
-console.log("North America's emission from 2018 has changed by " + Math.round(northAmerica18 / northAmerica08 * 100) + "% since 2008");
-console.log("That is a growth rate of approximately  " + Math.round(northAmerica18 - northAmerica08) + "kg CO2");
-console.log("Asia produces " + asia18 + "kg CO2");
-console.log("Asia contributes relatively " + Math.round(asia18 / total * 100) + "% Carbon Dioxide to the world's total emission");
-console.log("Asia's emission from 2018 has changed by " + Math.round(asia18 / asia08 * 100) + "% since 2008");
-console.log("That is a growth rate of approximately  " + Math.round(asia18 - asia08) + "kg CO2");
-console.log("Australia produces " + australia18 + "kg CO2");
-console.log("Australia contributes relatively " + Math.round(australia18 / total * 100) + "% Carbon Dioxide to the world's total emission");
-console.log("Australia's emission from 2018 has changed by " + Math.round(australia18 / australia08 * 100) + "% since 2008");
-console.log("That is a growth rate of approximately " + Math.round(australia18 - australia08) + "kg CO2");
+function consoleOutput(name, oldValue, newValue) {
+    console.log(name + " produces " + newValue + "kg CO2");
+    console.log(name + " contributes relatively " + Math.round(newValue / total * 100) + "% Carbon Dioxide to the world's total emission");
+    console.log(name + "'s emission from 2018 has changed by " + Math.round(newValue / oldValue * 100) + "% since 2008");
+    console.log("That is a growth rate of approximately  " + Math.round(newValue - oldValue) + "kg CO2");
+}
+consoleOutput("Africa", africa08, africa18);
+consoleOutput("South America", southAmerica08, southAmerica18);
+consoleOutput("Europe", europe08, europe18);
+consoleOutput("North America", northAmerica08, northAmerica18);
+consoleOutput("Asia", asia08, asia18);
+consoleOutput("Australia", australia08, australia18);
+// console.log("Africa produces " + africa18 + "kg CO2")
+//console.log("Africa contributes relatively " + Math.round(africa18/total*100) + "% Carbon Dioxide to the world's total emission")
+//console.log("Africa's emission from 2018 has changed by " + Math.round(africa18/africa08*100)  + "% since 2008")
+//console.log("That is a growth rate of approximately  " + Math.round(africa18-africa08) + "kg CO2")
+//console.log("South America produces " + southAmerica18 + "kg CO2")
+//console.log("South America contributes relatively " + Math.round(southAmerica18/total*100) + "% Carbon Dioxide to the world's total emission")
+//console.log("South America's emission from 2018 has changed by " + Math.round(southAmerica18/southAmerica08*100)  + "% since 2008")
+//console.log("That is a growth rate of approximately  " + Math.round(southAmerica18-southAmerica08) + "kg CO2")
+//console.log("Europe produces " +  europe18 + "kg CO2")
+//console.log("Europe contributes relatively " +  Math.round(europe18/total*100) + "% Carbon Dioxide to the world's total emission")
+//console.log("Europe's emission from 2018 has changed by " +  Math.round(europe18/europe08*100)  + "% since 2008")
+//console.log("That is a growth rate of approximately  " +  Math.round(europe18-europe08) + "kg CO2")
+//console.log("North America produces " + northAmerica18 + "kg CO2")
+//console.log("North America contributes relatively " +  Math.round(northAmerica18/total*100) + "% Carbon Dioxide to the world's total emission")
+//console.log("North America's emission from 2018 has changed by " +  Math.round(northAmerica18/northAmerica08*100)  + "% since 2008")
+//console.log("That is a growth rate of approximately  " +  Math.round(northAmerica18-northAmerica08) + "kg CO2")
+//console.log("Asia produces " +  asia18 + "kg CO2")
+//console.log("Asia contributes relatively " +  Math.round(asia18/total*100) + "% Carbon Dioxide to the world's total emission")
+//console.log("Asia's emission from 2018 has changed by " +  Math.round(asia18/asia08*100)  + "% since 2008")
+//console.log("That is a growth rate of approximately  " +  Math.round(asia18-asia08) + "kg CO2")
+//console.log("Australia produces "  +  australia18 + "kg CO2")
+//console.log("Australia contributes relatively "  +  Math.round(australia18/total*100) + "% Carbon Dioxide to the world's total emission")
+//console.log("Australia's emission from 2018 has changed by "  +  Math.round(australia18/australia08*100)  + "% since 2008")
+//console.log("That is a growth rate of approximately "  +  Math.round(australia18-australia08) + "kg CO2")
 //# sourceMappingURL=script.js.map
