@@ -32,7 +32,7 @@ function onClick(name, oldValue, newValue) {
     document.querySelector(".h2_04").innerHTML = Math.round(newValue - oldValue) + "kg CO2";
 }
 onClick('Europe', europe08, europe18);
-document.querySelector(".europe").addEventListener("click", function (, europe08, europe18) {
+document.querySelector(".europe").addEventListener("click", function () {
     document.querySelector("h1").innerHTML = "Carbon Dioxide Emissions in " + name;
     document.querySelector(".h2_01").innerHTML = newValue.toString();
     document.querySelector("p").innerHTML = "Emission absolute of " + name + " in 2018";

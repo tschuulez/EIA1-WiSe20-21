@@ -43,9 +43,10 @@ function onClick(name: string, oldValue: number, newValue: number) {
   document.querySelector(".h2_03").innerHTML =  Math.round(newValue/oldValue*100) + "%";
   document.querySelector(".h2_04").innerHTML =  Math.round(newValue-oldValue) + "kg CO2"
 }
-onClick('Europe', europe08, europe18)
+onClick('Europe', europe08, europe18);
 
-document.querySelector(".europe").addEventListener("click", function('Europe', europe08, europe18) {
+document.querySelector(".europe").addEventListener("click", function(){
+   
     document.querySelector("h1").innerHTML = "Carbon Dioxide Emissions in " + name;
     document.querySelector(".h2_01").innerHTML = newValue.toString() ; 
     document.querySelector("p").innerHTML = "Emission absolute of " + name + " in 2018";
@@ -53,22 +54,22 @@ document.querySelector(".europe").addEventListener("click", function('Europe', e
     document.querySelector(".h2_03").innerHTML =  Math.round(newValue/oldValue*100) + "%";
     document.querySelector(".h2_04").innerHTML =  Math.round(newValue-oldValue) + "kg CO2"
 
-})
+});
 
-onClick('North America', northAmerica08, northAmerica18)
-document.querySelector(".europe").addEventListener("click", onClick('North America', northAmerica08, northAmerica18))
+onClick('North America', northAmerica08, northAmerica18);
+document.querySelector(".europe").addEventListener("click", onClick('North America', northAmerica08, northAmerica18));
 
-onClick('South America', southAmerica08, southAmerica18)
-document.querySelector(".europe").addEventListener("click", onClick('South America', southAmerica08, southAmerica18))
+onClick('South America', southAmerica08, southAmerica18);
+document.querySelector(".europe").addEventListener("click", onClick('South America', southAmerica08, southAmerica18));
 
-onClick('Africa', africa08, africa18)
-document.querySelector(".europe").addEventListener("click", onClick('Europe', europe08, europe18))
+onClick('Africa', africa08, africa18);
+document.querySelector(".europe").addEventListener("click", onClick('Europe', europe08, europe18));
 
-onClick('Asia', asia08, asia18)
-document.querySelector(".europe").addEventListener("click", onClick('Europe', europe08, europe18))
+onClick('Asia', asia08, asia18);
+document.querySelector(".europe").addEventListener("click", onClick('Europe', europe08, europe18));
 
-onClick('Australia', australia08, australia18)
-document.querySelector(".europe").addEventListener("click", onClick('Europe', europe08, europe18))
+onClick('Australia', australia08, australia18);
+document.querySelector(".europe").addEventListener("click", onClick('Europe', europe08, europe18));
 
 
 

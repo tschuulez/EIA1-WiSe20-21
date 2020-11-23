@@ -21,7 +21,7 @@ var total: number = africa18 + southAmerica18 + europe18 + northAmerica18 + asia
 function Outputs(name: string, oldValue: number, newValue: number) {
     console.log(name + " produces " + newValue + "kg CO2" )
     console.log(name + " contributes relatively " + Math.round(newValue/total*100) + "% Carbon Dioxide to the world's total emission")
-    console.log(name + "'s emission from 2018 has changed by " + Math.round(newValue/oldValue*100)  + "% since 2008")
+    console.log(name + "'s emission from 2018 has changed by " + Math.round(((newValue/oldValue)-1) *100)  + "% since 2008")
     console.log("That is a growth rate of approximately  " + Math.round(newValue-oldValue) + "kg CO2")
 }
 
