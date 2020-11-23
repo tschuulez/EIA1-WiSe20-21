@@ -18,19 +18,64 @@ var australia18: number = 2100.5;
 
 var total: number = africa18 + southAmerica18 + europe18 + northAmerica18 + asia18 + australia18; 
 
-function consoleOutput(name: string, oldValue: number, newValue: number) {
-    console.log(name + " produces " + newValue + "kg CO2" )
-    console.log(name + " contributes relatively " + Math.round(newValue/total*100) + "% Carbon Dioxide to the world's total emission")
-    console.log(name + "'s emission from 2018 has changed by " + Math.round(newValue/oldValue*100)  + "% since 2008")
-    console.log("That is a growth rate of approximately  " + Math.round(newValue-oldValue) + "kg CO2")
-}
 
-consoleOutput("Africa", africa08, africa18)
-consoleOutput("South America", southAmerica08, southAmerica18)
-consoleOutput("Europe", europe08, europe18)
-consoleOutput("North America", northAmerica08, northAmerica18)
-consoleOutput("Asia", asia08, asia18)
-consoleOutput("Australia", australia08, australia18)
+
+//function Output(name: string, oldValue: number, newValue: number) {
+    //console.log(name + " produces " + newValue + "kg CO2" )
+    //console.log(name + " contributes relatively " + Math.round(newValue/total*100) + "% Carbon Dioxide to the world's total emission")
+    //console.log(name + "'s emission from 2018 has changed by " + Math.round(newValue/oldValue*100)  + "% since 2008")
+    //console.log("That is a growth rate of approximately  " + Math.round(newValue-oldValue) + "kg CO2")
+//}
+
+//Output("Africa", africa08, africa18)
+//Output("South America", southAmerica08, southAmerica18)
+//Output("Europe", europe08, europe18)
+//Output("North America", northAmerica08, northAmerica18)
+//Output("Asia", asia08, asia18)
+//Output("Australia", australia08, australia18)
+
+function onClick(name: string, oldValue: number, newValue: number) {
+
+  document.querySelector("h1").innerHTML = "Carbon Dioxide Emissions in " + name;
+  document.querySelector(".h2_01").innerHTML = newValue.toString() ; 
+  document.querySelector("p").innerHTML = "Emission absolute of " + name + " in 2018";
+  document.querySelector(".h2_02").innerHTML =  Math.round(newValue/total*100) + "%";
+  document.querySelector(".h2_03").innerHTML =  Math.round(newValue/oldValue*100) + "%";
+  document.querySelector(".h2_04").innerHTML =  Math.round(newValue-oldValue) + "kg CO2"
+}
+onClick('Europe', europe08, europe18)
+
+document.querySelector(".europe").addEventListener("click", function('Europe', europe08, europe18) {
+    document.querySelector("h1").innerHTML = "Carbon Dioxide Emissions in " + name;
+    document.querySelector(".h2_01").innerHTML = newValue.toString() ; 
+    document.querySelector("p").innerHTML = "Emission absolute of " + name + " in 2018";
+    document.querySelector(".h2_02").innerHTML =  Math.round(newValue/total*100) + "%";
+    document.querySelector(".h2_03").innerHTML =  Math.round(newValue/oldValue*100) + "%";
+    document.querySelector(".h2_04").innerHTML =  Math.round(newValue-oldValue) + "kg CO2"
+
+})
+
+onClick('North America', northAmerica08, northAmerica18)
+document.querySelector(".europe").addEventListener("click", onClick('North America', northAmerica08, northAmerica18))
+
+onClick('South America', southAmerica08, southAmerica18)
+document.querySelector(".europe").addEventListener("click", onClick('South America', southAmerica08, southAmerica18))
+
+onClick('Africa', africa08, africa18)
+document.querySelector(".europe").addEventListener("click", onClick('Europe', europe08, europe18))
+
+onClick('Asia', asia08, asia18)
+document.querySelector(".europe").addEventListener("click", onClick('Europe', europe08, europe18))
+
+onClick('Australia', australia08, australia18)
+document.querySelector(".europe").addEventListener("click", onClick('Europe', europe08, europe18))
+
+
+
+
+
+
+
 
 
 // console.log("Africa produces " + africa18 + "kg CO2")
