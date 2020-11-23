@@ -22,6 +22,7 @@ function Function1() {
     document.querySelector(".h2_02").innerHTML = Math.round(newValueEurope18 / total * 100) + "%";
     document.querySelector(".h2_03").innerHTML = Math.round(((newValueEurope18 / oldValueEurope08) - 1) * 100) + "%";
     document.querySelector(".h2_04").innerHTML = Math.round(newValueEurope18 - oldValueEurope08) + "kg CO2";
+    document.querySelector(".chart").setAttribute('style', 'height:' + Math.round(newValueEurope18 / total * 100) + "%");
 }
 document.querySelector(".europe").addEventListener("click", Function1);
 function Function2() {
@@ -31,6 +32,7 @@ function Function2() {
     document.querySelector(".h2_02").innerHTML = Math.round(newValueNorthAmerica18 / total * 100) + "%";
     document.querySelector(".h2_03").innerHTML = Math.round(((newValueNorthAmerica18 / oldValueNorthAmerica08) - 1) * 100) + "%";
     document.querySelector(".h2_04").innerHTML = Math.round(newValueNorthAmerica18 - oldValueNorthAmerica08) + "kg CO2";
+    document.querySelector(".chart").setAttribute('style', 'height:' + Math.round(newValueNorthAmerica18 / total * 100) + "%");
 }
 document.querySelector(".northamerica").addEventListener("click", Function2);
 function Function3() {
@@ -40,6 +42,7 @@ function Function3() {
     document.querySelector(".h2_02").innerHTML = Math.round(newValueSouthAmerica18 / total * 100) + "%";
     document.querySelector(".h2_03").innerHTML = Math.round(((newValueSouthAmerica18 / oldValueSouthAmerica08) - 1) * 100) + "%";
     document.querySelector(".h2_04").innerHTML = Math.round(newValueSouthAmerica18 - oldValueSouthAmerica08) + "kg CO2";
+    document.querySelector(".chart").setAttribute('style', 'height:' + Math.round(newValueSouthAmerica18 / total * 100) + "%");
 }
 document.querySelector(".southamerica").addEventListener("click", Function3);
 function Function4() {
@@ -49,6 +52,7 @@ function Function4() {
     document.querySelector(".h2_02").innerHTML = Math.round(newValueAfrica18 / total * 100) + "%";
     document.querySelector(".h2_03").innerHTML = Math.round(((newValueAfrica18 / oldValueAfrica08) - 1) * 100) + "%";
     document.querySelector(".h2_04").innerHTML = Math.round(newValueAfrica18 - oldValueAfrica08) + "kg CO2";
+    document.querySelector(".chart").setAttribute('style', 'height:' + Math.round(newValueAfrica18 / total * 100) + "%");
 }
 document.querySelector(".africa").addEventListener("click", Function4);
 function Function5() {
@@ -58,6 +62,7 @@ function Function5() {
     document.querySelector(".h2_02").innerHTML = Math.round(newValueAsia18 / total * 100) + "%";
     document.querySelector(".h2_03").innerHTML = Math.round(((newValueAsia18 / oldValueAsia08) - 1) * 100) + "%";
     document.querySelector(".h2_04").innerHTML = Math.round(newValueAsia18 - oldValueAsia08) + "kg CO2";
+    document.querySelector(".chart").setAttribute('style', 'height:' + Math.round(newValueAsia18 / total * 100) + "%");
 }
 document.querySelector(".asia").addEventListener("click", Function5);
 function Function6() {
@@ -67,6 +72,7 @@ function Function6() {
     document.querySelector(".h2_02").innerHTML = Math.round(newValueAustralia18 / total * 100) + "%";
     document.querySelector(".h2_03").innerHTML = Math.round(((newValueAustralia18 / oldValueAustralia08) - 1) * 100) + "%";
     document.querySelector(".h2_04").innerHTML = Math.round(newValueAustralia18 - oldValueAustralia08) + "kg CO2";
+    document.querySelector(".chart").setAttribute('style', 'height:' + Math.round(newValueAustralia18 / total * 100) + "%");
 }
 document.querySelector(".australia").addEventListener("click", Function6);
 // console.log("Africa produces " + africa18 + "kg CO2")
