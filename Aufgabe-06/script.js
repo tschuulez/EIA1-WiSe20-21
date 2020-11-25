@@ -1,6 +1,6 @@
 var Africa08 = 1028;
 var Africa18 = 1235.5;
-var AfricaRel = Math.round(africa18 / total * 100);
+var AfricaRel = Math.round(Africa18 / total * 100);
 var AfricaChange = Math.round(((Africa18 / Africa08) - 1) * 100);
 var AfricaGrowth = Math.round(Africa18 - Africa08);
 var SouthAmerica08 = 1132.6;

@@ -1,6 +1,6 @@
 var Africa08: number = 1028;
 var Africa18: number = 1235.5;
-var AfricaRel: number = Math.round(africa18/total*100);
+var AfricaRel: number = Math.round(Africa18/total*100);
 var AfricaChange: number = Math.round(((Africa18/Africa08)-1) *100);
 var AfricaGrowth: number = Math.round(Africa18-Africa08);
 
@@ -38,6 +38,7 @@ var total: number = Africa18 + SouthAmerica18 + Europe18 + NorthAmerica18 + Asia
 
 
 
+
 function myFunction(name: string, value18: number, valueRel: number, valueChange: number, valueGrowth: number ){
 
     document.querySelector("h1").innerHTML = "Carbon Dioxide Emissions in" + name;
@@ -50,7 +51,8 @@ function myFunction(name: string, value18: number, valueRel: number, valueChange
     document.querySelector(".chart").setAttribute( 'style', 'height:' + valueRel + "%")
 }
 
-document.querySelector(".europe").addEventListener("click", myFunction.bind(null, "Europe", Europe18, EuropeRel, EuropeChange, EuropeGrowth));
+document.querySelector(".europe").addEventListener("click", myFunction.bind( null,"Europe", Europe18, EuropeRel, EuropeChange, EuropeGrowth));
+
 
 document.querySelector(".northamerica").addEventListener("click", myFunction.bind(null, "North America", NorthAmerica18, NorthAmericaRel, NorthAmericaChange, NorthAmericaGrowth));
 
