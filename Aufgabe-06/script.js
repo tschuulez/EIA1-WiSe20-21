@@ -1,7 +1,7 @@
 var Africa08 = 1028;
 var Africa18 = 1235.5;
 var AfricaRel = Math.round(africa18 / total * 100);
-var AfrciaChange = Math.round(((Africa18 / Africa08) - 1) * 100);
+var AfricaChange = Math.round(((Africa18 / Africa08) - 1) * 100);
 var AfricaGrowth = Math.round(Africa18 - Africa08);
 var SouthAmerica08 = 1132.6;
 var SouthAmerica18 = 1261.5;
@@ -39,9 +39,9 @@ function myFunction(name, value18, valueRel, valueChange, valueGrowth) {
     document.querySelector(".chart").setAttribute('style', 'height:' + valueRel + "%");
 }
 document.querySelector(".europe").addEventListener("click", myFunction.bind(null, "Europe", Europe18, EuropeRel, EuropeChange, EuropeGrowth));
-document.querySelector(".northamerica").addEventListener("click", myFunction.bind(null, "North America", Europe18, EuropeRel, EuropeChange, EuropeGrowth));
-document.querySelector(".southamerica").addEventListener("click", myFunction.bind(null, "South America", Europe18, EuropeRel, EuropeChange, EuropeGrowth));
-document.querySelector(".africa").addEventListener("click", myFunction.bind(null, "Africa", Europe18, EuropeRel, EuropeChange, EuropeGrowth));
-document.querySelector(".asia").addEventListener("click", myFunction.bind(null, "Asia", Europe18, EuropeRel, EuropeChange, EuropeGrowth));
-document.querySelector(".australia").addEventListener("click", myFunction.bind(null, "Australia", Europe18, EuropeRel, EuropeChange, EuropeGrowth));
+document.querySelector(".northamerica").addEventListener("click", myFunction.bind(null, "North America", NorthAmerica18, NorthAmericaRel, NorthAmericaChange, NorthAmericaGrowth));
+document.querySelector(".southamerica").addEventListener("click", myFunction.bind(null, "South America", SouthAmerica18, SouthAmericaRel, SouthAmericaChange, SouthAmericaGrowth));
+document.querySelector(".africa").addEventListener("click", myFunction.bind(null, "Africa", Africa18, AfricaRel, AfricaChange, AfricaGrowth));
+document.querySelector(".asia").addEventListener("click", myFunction.bind(null, "Asia", Asia18, AsiaRel, AsiaChange, AsiaGrowth));
+document.querySelector(".australia").addEventListener("click", myFunction.bind(null, "Australia", Australia18, AustraliaRel, AustraliaChange, AustraliaGrowth));
 //# sourceMappingURL=script.js.map

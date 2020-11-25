@@ -1,7 +1,7 @@
 var Africa08: number = 1028;
 var Africa18: number = 1235.5;
 var AfricaRel: number = Math.round(africa18/total*100);
-var AfrciaChange: number = Math.round(((Africa18/Africa08)-1) *100);
+var AfricaChange: number = Math.round(((Africa18/Africa08)-1) *100);
 var AfricaGrowth: number = Math.round(Africa18-Africa08);
 
 var SouthAmerica08: number = 1132.6;
@@ -52,15 +52,15 @@ function myFunction(name: string, value18: number, valueRel: number, valueChange
 
 document.querySelector(".europe").addEventListener("click", myFunction.bind(null, "Europe", Europe18, EuropeRel, EuropeChange, EuropeGrowth));
 
-document.querySelector(".northamerica").addEventListener("click", myFunction.bind(null, "North America", Europe18, EuropeRel, EuropeChange, EuropeGrowth));
+document.querySelector(".northamerica").addEventListener("click", myFunction.bind(null, "North America", NorthAmerica18, NorthAmericaRel, NorthAmericaChange, NorthAmericaGrowth));
 
-document.querySelector(".southamerica").addEventListener("click", myFunction.bind(null, "South America", Europe18, EuropeRel, EuropeChange, EuropeGrowth));
+document.querySelector(".southamerica").addEventListener("click", myFunction.bind(null, "South America", SouthAmerica18, SouthAmericaRel, SouthAmericaChange, SouthAmericaGrowth));
 
-document.querySelector(".africa").addEventListener("click", myFunction.bind(null, "Africa", Europe18, EuropeRel, EuropeChange, EuropeGrowth));
+document.querySelector(".africa").addEventListener("click", myFunction.bind(null, "Africa", Africa18, AfricaRel, AfricaChange, AfricaGrowth));
 
-document.querySelector(".asia").addEventListener("click", myFunction.bind(null, "Asia", Europe18, EuropeRel, EuropeChange, EuropeGrowth));
+document.querySelector(".asia").addEventListener("click", myFunction.bind(null, "Asia", Asia18, AsiaRel, AsiaChange, AsiaGrowth));
 
-document.querySelector(".australia").addEventListener("click", myFunction.bind(null, "Australia", Europe18, EuropeRel, EuropeChange, EuropeGrowth));
+document.querySelector(".australia").addEventListener("click", myFunction.bind(null, "Australia", Australia18, AustraliaRel, AustraliaChange, AustraliaGrowth));
 
 
 
