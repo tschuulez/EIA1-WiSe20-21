@@ -31,7 +31,7 @@ var AustraliaGrowth = Math.round(Australia18 - Australia08);
 var total = Africa18 + SouthAmerica18 + Europe18 + NorthAmerica18 + Asia18 + Australia18;
 function myFunction(name, value18, valueRel, valueChange, valueGrowth) {
     document.querySelector("h1").innerHTML = "Carbon Dioxide Emissions in" + name;
-    document.querySelector(".h2_01").innerHTML = value18;
+    document.querySelector(".h2_01").innerHTML = value18.toString();
     document.querySelector("p").innerHTML = "Emission absolute of " + name + " in 2018";
     document.querySelector(".h2_02").innerHTML = valueRel + "%";
     document.querySelector(".h2_03").innerHTML = valueChange + "%";
