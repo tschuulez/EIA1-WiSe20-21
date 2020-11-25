@@ -41,7 +41,7 @@ var total: number = Africa18 + SouthAmerica18 + Europe18 + NorthAmerica18 + Asia
 function myFunction(name: string, value18: number, valueRel: number, valueChange: number, valueGrowth: number ){
 
     document.querySelector("h1").innerHTML = "Carbon Dioxide Emissions in" + name;
-    document.querySelector(".h2_01").innerHTML = value18.toString() ; 
+    document.querySelector(".h2_01").innerHTML = value18 ; 
     document.querySelector("p").innerHTML = "Emission absolute of " + name + " in 2018";
     document.querySelector(".h2_02").innerHTML =  valueRel + "%";
     document.querySelector(".h2_03").innerHTML =  valueChange + "%";
