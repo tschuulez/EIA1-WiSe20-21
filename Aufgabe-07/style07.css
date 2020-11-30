@@ -1,0 +1,152 @@
+body{ 
+    background-color: #000000;
+}
+
+.flexbox{
+    position: absolute;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 500px;
+    height: 570px;
+    left: 50%;
+    top: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translate(-50%, -50%);
+    
+}
+
+.button1{
+    position: relative;
+    margin: 4px;
+    background-color: #5FA0F3;
+    width: 150px;
+    height: 150px;
+    border-radius: 8px;
+    box-shadow: white;    
+
+}
+.button1:hover{
+    opacity: 0.8;
+}
+
+.button2{
+    position: relative;
+    margin: 4px;
+    background-color: #5FA0F3;
+    width: 150px;
+    height: 150px;
+    border-radius: 8px;
+    
+}
+.button2:hover{
+    opacity: 0.8;
+}
+
+.button3{
+    position: relative;
+    margin: 4px;
+    background-color: #5FA0F3;
+    width: 150px;
+    height: 150px;
+    border-radius: 8px;
+    
+}
+.button3:hover{
+    opacity: 0.8;
+}
+
+.button4{
+    position: relative;
+    margin: 4px;
+    background-color: #F35FA5 ;
+    width: 150px;
+    height: 150px;
+    border-radius: 8px;
+}
+.button4:hover{
+    opacity: 0.8;
+}
+
+.button5{
+    position: relative;
+    margin: 4px;
+    background-color: #F35FA5;
+    width: 150px;
+    height: 150px;
+    border-radius: 8px;
+    
+}
+.button5:hover{
+    opacity: 0.8;
+}
+
+.button6{
+    position: relative;
+    margin: 4px;
+    background-color: #F35FA5;
+    width: 150px;
+    height: 150px;
+    border-radius: 8px;
+    
+}
+.button6:hover{
+    opacity: 0.8;   
+}
+
+.button7{
+    position: relative;
+    margin: 4px;
+    background-color: #F35FA5;
+    width: 150px;
+    height: 150px;
+    border-radius: 8px;
+    
+}
+.button7:hover{
+    opacity: 0.8;
+}
+
+.button8{
+    position: relative;
+    margin: 4px;
+    background-color: #F69923;
+    width: 150px;
+    height: 150px;
+    border-radius: 8px;
+    
+}
+.button8:hover{
+    opacity: 0.8;
+}
+
+.button9{
+    position: relative;
+    margin: 4px;
+    background-color: #F69923;
+    width: 150px;
+    height: 150px;
+    border-radius: 8px;
+    
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+}
+
+  .button9:hover{
+      opacity: 0.8;
+  }
+  
+
+.PlayButton{
+    position: relative;      
+}
+.PlayButton:hover{
+    opacity: 0.6;
+}
