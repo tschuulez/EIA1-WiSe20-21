@@ -1,0 +1,70 @@
+.flexbox{
+    position: absolute;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 500px;
+    height: 570px;
+    left: 50%;
+    top: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translate(-50%, -50%);
+}
+body{
+    background-image: url("../images/background.jpg")
+}
+.button1{
+    position: relative;
+    margin: 30px;
+    background-color: whitesmoke;
+    width: 200px;
+    height: 60px;
+    border-radius: 10px;
+    box-shadow: white; 
+    justify-content: center;
+    align-items: center;
+    
+}
+.button1:hover{
+    background-color: grey;
+
+}
+
+.button2{
+    position: relative;
+    margin: 30px;
+    background-color: whitesmoke;
+    width: 200px;
+    height: 60px;
+    border-radius: 10px;
+    box-shadow: white; 
+    justify-content: center;
+    align-items: center;
+
+}
+.button2:hover{
+    background-color: grey;
+   
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    justify-content: center;
+    font-size: larger;
+    font-weight: bolder;
+}
+.text1{
+    position: absolute;
+    top: 25%;
+    left: 25%;
+
+
+}
+.text2{
+    position: absolute;
+    top: 25%;
+    left: 30%;
+
+}
