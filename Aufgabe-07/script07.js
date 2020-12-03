@@ -21,14 +21,14 @@ document.querySelector(".button6").addEventListener("click", playSample.bind(nul
 document.querySelector(".button7").addEventListener("click", playSample.bind(null, Button7));
 document.querySelector(".button8").addEventListener("click", playSample.bind(null, Button8));
 document.querySelector(".button9").addEventListener("click", playSample.bind(null, Button9));
-var index = 0;
 function Beat() {
-    PlayButtonBeat[index].play();
-    index = index + 1;
+    PlayButtonBeat[0].play();
+    PlayButtonBeat[1].play();
+    PlayButtonBeat[2].play();
 }
-function Intervall() {
-    setInterval(Beat, 400);
-}
-document.querySelector(".PlayButton").addEventListener("click", Intervall);
-//Replay funktion???
+document.querySelector(".PlayButton").addEventListener("click", function () {
+    setInterval(function () {
+        Beat();
+    }, 600);
+});
 //# sourceMappingURL=script07.js.map
