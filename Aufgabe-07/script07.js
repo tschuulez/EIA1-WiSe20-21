@@ -7,8 +7,6 @@ var Button6 = new Audio('assets/kick.mp3');
 var Button7 = new Audio('assets/laugh-1.mp3');
 var Button8 = new Audio('assets/laugh-2.mp3');
 var Button9 = new Audio('assets/snare.mp3');
-//0    ,   1,       2
-var PlayButtonBeat = [Button6, Button9, Button5];
 function playSample(Button) {
     Button.play();
 }
@@ -21,14 +19,13 @@ document.querySelector(".button6").addEventListener("click", playSample.bind(nul
 document.querySelector(".button7").addEventListener("click", playSample.bind(null, Button7));
 document.querySelector(".button8").addEventListener("click", playSample.bind(null, Button8));
 document.querySelector(".button9").addEventListener("click", playSample.bind(null, Button9));
-function Beat() {
-    PlayButtonBeat[0].play();
-    PlayButtonBeat[1].play();
-    PlayButtonBeat[2].play();
-}
+//0    ,   1,       2
+var PlayButtonBeat = [Button6, Button9, Button5];
+var index = 0;
 document.querySelector(".PlayButton").addEventListener("click", function () {
     setInterval(function () {
-        Beat();
+        PlayButtonBeat[index].play();
+        index = index + 1;
     }, 600);
 });
 //# sourceMappingURL=script07.js.map
