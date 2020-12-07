@@ -147,7 +147,7 @@ body{
 .PlayButton{
     position: relative; 
     margin: 15px;
-    font-size: 80px;
+    font-size: 70px;
     color: white;
 }
 .PlayButton:hover{
@@ -157,7 +157,7 @@ body{
 .StopButton{
    position: relative;
    margin: 15px;
-   font-size: 80px;
+   font-size: 70px;
    color: white;
    
 }
@@ -172,7 +172,7 @@ body{
 .RecordButton{
    position: relative;
    margin: 15px;
-   font-size: 80px;
+   font-size: 70px;
    color: white; 
 }
 .RecordButton:hover{
@@ -182,7 +182,7 @@ body{
 .DeleteButton{
    position: relative;
    margin: 15px;
-   font-size: 80px;
+   font-size: 70px;
    color: white;
 }
 .DeleteButton:hover{
