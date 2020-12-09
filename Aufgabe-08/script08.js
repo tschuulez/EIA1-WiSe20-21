@@ -10,6 +10,7 @@ var button9 = new Audio("assets/snare.mp3");
 // tslint:disable-next-line: no-any
 function playSample(button) {
     button.play();
+    recordingTheBeat(button);
 }
 document.querySelector(".button1").addEventListener("click", playSample.bind(null, button1));
 document.querySelector(".button2").addEventListener("click", playSample.bind(null, button2));
@@ -36,7 +37,6 @@ function deletingTheBeat() {
 }
 //ClickEvent für den RecordButton 
 document.querySelector(".RecordButton").addEventListener("click", function () {
-    deletingTheBeat;
     if (recordButton.classList.contains("ichWurdeGeklickt")) {
         recordButton.classList.remove("ichWurdeGeklickt");
         activated = false;
