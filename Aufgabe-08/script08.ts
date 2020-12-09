@@ -60,24 +60,8 @@ document.querySelector(".RecordButton").addEventListener("click", () => {
         activated = true;
     }
     recordingTheBeat;
+    console.log(activated);
 });
-
-//Funktion für's Recording/ Wenn die activated = true wird recorded 
-
-function recordingTheBeat (button: HTMLAudioElement) {
-    
-    if (activated == true) {
-        beat.push(button);
-       
-    }
-}
-//Funktion für das Löschen des recorded Beats/ removing items from the array recordedBeat/ recordedBeat.length ist die Anzahl 
-//an aufgenommenen sounds
- 
-function deletingTheBeat () {
-    beat.splice(0, beat.length);
- }
-
 
 
  //ClickEvent für den DeleteButton 
@@ -86,6 +70,27 @@ document.querySelector(".DeleteButton").addEventListener("click", () => {
      deletingTheBeat();
      console.log(beat.length);
  });
+
+ //Funktion für das Löschen des recorded Beats/ removing items from the array recordedBeat/ recordedBeat.length ist die Anzahl 
+//an aufgenommenen sounds
+ 
+function deletingTheBeat () {
+    beat.splice(0, beat.length);
+    console.log(beat.length);
+}
+
+//Funktion für's Recording/ Wenn die activated = true wird recorded 
+
+function recordingTheBeat (button: HTMLAudioElement) {
+    console.log(activated);
+    if (activated == true) {
+        beat.push(button);
+        console.log(beat.length);  
+    }
+    
+}
+
+
 
 
 var playButton: HTMLElement = document.querySelector(".PlayButton");
@@ -100,9 +105,9 @@ document.querySelector(".PlayButton").addEventListener("click",  () => {
         theInterval = setInterval( () => {
           
             for (var index: number = 0; index < beat.length; index++) {   
-            beat[index].play();
+            playSample(beat[index]);
             }
-         
+
          },                        600);
      
         if (playButton.classList.contains("inactive")) {
@@ -137,3 +142,5 @@ document.querySelector(".StopButton").addEventListener("click", () => {
       }
  
  });
+
+ 
