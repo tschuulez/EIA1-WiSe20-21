@@ -7,7 +7,6 @@ var button6 = new Audio("assets/kick.mp3");
 var button7 = new Audio("assets/laugh-1.mp3");
 var button8 = new Audio("assets/laugh-2.mp3");
 var button9 = new Audio("assets/snare.mp3");
-// tslint:disable-next-line: no-any
 function playSample(button) {
     button.play();
     recordingTheBeat(button);
@@ -66,11 +65,16 @@ var playButton = document.querySelector(".PlayButton");
 var stopButton = document.querySelector(".StopButton");
 // tslint:disable-next-line: no-any
 var theInterval;
+var index;
 //ClickEvent PlayButton/ Aufgabe: Abspielen des Beat-Arrays
 document.querySelector(".PlayButton").addEventListener("click", function () {
     theInterval = setInterval(function () {
-        for (var index = 0; index < beat.length; index++) {
+        if (index < beat.length) {
             playSample(beat[index]);
+            index++;
+        }
+        else {
+            index = 0;
         }
     }, 600);
     if (playButton.classList.contains("inactive")) {

@@ -16,8 +16,8 @@ var button8: HTMLAudioElement = new Audio("assets/laugh-2.mp3");
 
 var button9: HTMLAudioElement = new Audio("assets/snare.mp3");
 
-// tslint:disable-next-line: no-any
-function playSample(button: any): void {
+
+function playSample(button: HTMLAudioElement): void {
     button.play();
     recordingTheBeat(button);
 }
@@ -50,7 +50,7 @@ var activated: boolean;
  //Funktion für das Löschen des recorded Beats/ removing items from the array recordedBeat/ recordedBeat.length ist die Anzahl 
 //an aufgenommenen sounds
  
-function deletingTheBeat () {
+function deletingTheBeat (): void {
     beat.splice(0, beat.length);
     console.log(beat.length);
 }
@@ -68,6 +68,7 @@ document.querySelector(".RecordButton").addEventListener("click", () => {
     }
     
     recordingTheBeat;
+
     console.log(activated);
     console.log(beat.length);
 });
@@ -84,7 +85,7 @@ document.querySelector(".DeleteButton").addEventListener("click", () => {
 
 //Funktion für's Recording/ Wenn die activated = true wird recorded 
 
-function recordingTheBeat (button: HTMLAudioElement) {
+function recordingTheBeat (button: HTMLAudioElement): void {
     console.log(activated);
     if (activated == true) {
         beat.push(button);
@@ -101,14 +102,18 @@ var stopButton: HTMLElement = document.querySelector(".StopButton");
  
  // tslint:disable-next-line: no-any
 var theInterval: any;
- 
+var index: number; 
 //ClickEvent PlayButton/ Aufgabe: Abspielen des Beat-Arrays
 document.querySelector(".PlayButton").addEventListener("click",  () => {
         
         theInterval = setInterval( () => {
           
-            for (var index: number = 0; index < beat.length; index++) {   
+            if (index < beat.length) {   
             playSample(beat[index]);
+            index++;
+            }
+            else {
+                index = 0; 
             }
 
          },                        600);
