@@ -20,16 +20,52 @@ document.querySelector(".button6").addEventListener("click", playSample.bind(nul
 document.querySelector(".button7").addEventListener("click", playSample.bind(null, button7));
 document.querySelector(".button8").addEventListener("click", playSample.bind(null, button8));
 document.querySelector(".button9").addEventListener("click", playSample.bind(null, button9));
-//0    ,   1,       2
-var playButtonBeat = [button6, button9, button5];
+//Variablen für RecordButton und DeleteButton     
+var recordButton = document.querySelector(".RecordButton");
+var deleteButton = document.querySelector(".DeleteButton");
+// Beat Array
+var beat = [button6, button9, button5];
+//Note to myself: .push() adds new items to the recordingBeat & .splice() adds/ removes items 
+// boolean means on or off / true or false
+var activated;
+//ClickEvent für den RecordButton 
+document.querySelector(".RecordButton").addEventListener("click", function () {
+    deletingTheBeat;
+    if (recordButton.classList.contains("ichWurdeGeklickt")) {
+        recordButton.classList.remove("ichWurdeGeklickt");
+        activated = false;
+    }
+    else {
+        recordButton.classList.add("ichWurdeGeklickt");
+        activated = true;
+    }
+    recordingTheBeat;
+});
+//Funktion für's Recording/ Wenn die activated = true wird recorded 
+function recordingTheBeat(button) {
+    if (activated == true) {
+        beat.push(button);
+    }
+}
+//Funktion für das Löschen des recorded Beats/ removing items from the array recordedBeat/ recordedBeat.length ist die Anzahl 
+//an aufgenommenen sounds
+function deletingTheBeat() {
+    beat.splice(0, beat.length);
+}
+//ClickEvent für den DeleteButton 
+document.querySelector(".DeleteButton").addEventListener("click", function () {
+    deletingTheBeat();
+    console.log(beat.length);
+});
 var playButton = document.querySelector(".PlayButton");
 var stopButton = document.querySelector(".StopButton");
 // tslint:disable-next-line: no-any
 var theInterval;
+//ClickEvent PlayButton/ Aufgabe: Abspielen des Beat-Arrays
 document.querySelector(".PlayButton").addEventListener("click", function () {
     theInterval = setInterval(function () {
-        for (var index = 0; index < playButtonBeat.length; index++) {
-            playButtonBeat[index].play();
+        for (var index = 0; index < beat.length; index++) {
+            beat[index].play();
         }
     }, 600);
     if (playButton.classList.contains("inactive")) {
@@ -52,11 +88,4 @@ document.querySelector(".StopButton").addEventListener("click", function () {
         playButton.classList.add("inactive");
     }
 });
-//var index: number = 0;
-//document.querySelector(".PlayButton").addEventListener("click", function () {
-//setInterval(function () {
-// playButtonBeat[index].play();
-// index++;
-// }, 600);
-//})
 //# sourceMappingURL=script08.js.map

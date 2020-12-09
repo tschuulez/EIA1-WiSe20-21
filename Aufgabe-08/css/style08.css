@@ -188,3 +188,6 @@ body{
 .DeleteButton:hover{
     opacity: 0.8;
 }
+.ichWurdeGeklickt{
+    color: green;
+}

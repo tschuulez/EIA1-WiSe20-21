@@ -16,7 +16,6 @@ var button8: HTMLAudioElement = new Audio("assets/laugh-2.mp3");
 
 var button9: HTMLAudioElement = new Audio("assets/snare.mp3");
 
-
 // tslint:disable-next-line: no-any
 function playSample(button: any): void {
     button.play();
@@ -33,70 +32,108 @@ document.querySelector(".button8").addEventListener("click", playSample.bind(nul
 document.querySelector(".button9").addEventListener("click", playSample.bind(null, button9));
 
 
-                                              //0    ,   1,       2
-var playButtonBeat: HTMLAudioElement [] =  [ button6, button9, button5];
+
+//Variablen für RecordButton und DeleteButton     
+
+var recordButton: HTMLElement = document.querySelector(".RecordButton");
+var deleteButton: HTMLElement = document.querySelector(".DeleteButton");
+
+// Beat Array
+var beat: HTMLAudioElement [] = [button6, button9, button5];
+//Note to myself: .push() adds new items to the recordingBeat & .splice() adds/ removes items 
+
+// boolean means on or off / true or false
+var activated: boolean;
+
+
+//ClickEvent für den RecordButton 
+document.querySelector(".RecordButton").addEventListener("click", () => {
+
+    deletingTheBeat;
+
+    if (recordButton.classList.contains("ichWurdeGeklickt")) {
+        recordButton.classList.remove("ichWurdeGeklickt");
+        activated = false;
+    }
+    else {
+        recordButton.classList.add("ichWurdeGeklickt");
+        activated = true;
+    }
+    recordingTheBeat;
+});
+
+//Funktion für's Recording/ Wenn die activated = true wird recorded 
+
+function recordingTheBeat (button: HTMLAudioElement) {
+    
+    if (activated == true) {
+        beat.push(button);
+       
+    }
+}
+//Funktion für das Löschen des recorded Beats/ removing items from the array recordedBeat/ recordedBeat.length ist die Anzahl 
+//an aufgenommenen sounds
+ 
+function deletingTheBeat () {
+    beat.splice(0, beat.length);
+ }
+
+
+
+ //ClickEvent für den DeleteButton 
+ 
+document.querySelector(".DeleteButton").addEventListener("click", () => {
+     deletingTheBeat();
+     console.log(beat.length);
+ });
+
 
 var playButton: HTMLElement = document.querySelector(".PlayButton");
 var stopButton: HTMLElement = document.querySelector(".StopButton");
-
-// tslint:disable-next-line: no-any
-var theInterval: any;
-
-document.querySelector(".PlayButton").addEventListener("click",  () => {
-       
-       theInterval = setInterval( () => {
-         
-           for (var index: number = 0; index < playButtonBeat.length; index++) {   
-           playButtonBeat[index].play();
-           }
-        
-        },                        600);
-    
-       if (playButton.classList.contains("inactive")) {
-
-               playButton.classList.remove("inactive");
-               stopButton.classList.add("inactive");
-
-            }
-            else {
-
-                stopButton.classList.remove("inactive");
-                playButton.classList.add("inactive");
-        
-            }
-});
-
-document.querySelector(".StopButton").addEventListener("click", () => {
-
-    clearInterval(theInterval);
-
-    if (playButton.classList.contains("inactive")) {
-
-        playButton.classList.remove("inactive");
-        stopButton.classList.add("inactive");
-
-     }
-     else {
-
-         stopButton.classList.remove("inactive");
-         playButton.classList.add("inactive");
  
-     }
-
-});
-
-    
-
-
-//var index: number = 0;
-
-//document.querySelector(".PlayButton").addEventListener("click", function () {
-    
-    //setInterval(function () {
-       // playButtonBeat[index].play();
-       // index++;
-
-   // }, 600);
-
-//})
-
+ // tslint:disable-next-line: no-any
+var theInterval: any;
+ 
+//ClickEvent PlayButton/ Aufgabe: Abspielen des Beat-Arrays
+document.querySelector(".PlayButton").addEventListener("click",  () => {
+        
+        theInterval = setInterval( () => {
+          
+            for (var index: number = 0; index < beat.length; index++) {   
+            beat[index].play();
+            }
+         
+         },                        600);
+     
+        if (playButton.classList.contains("inactive")) {
+ 
+                playButton.classList.remove("inactive");
+                stopButton.classList.add("inactive");
+ 
+             }
+             else {
+ 
+                 stopButton.classList.remove("inactive");
+                 playButton.classList.add("inactive");
+         
+             }
+ });
+ 
+document.querySelector(".StopButton").addEventListener("click", () => {
+ 
+     clearInterval(theInterval);
+ 
+     if (playButton.classList.contains("inactive")) {
+ 
+         playButton.classList.remove("inactive");
+         stopButton.classList.add("inactive");
+ 
+      }
+      else {
+ 
+          stopButton.classList.remove("inactive");
+          playButton.classList.add("inactive");
+  
+      }
+ 
+ });
