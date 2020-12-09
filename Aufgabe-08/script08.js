@@ -28,6 +28,12 @@ var beat = [button6, button9, button5];
 //Note to myself: .push() adds new items to the recordingBeat & .splice() adds/ removes items 
 // boolean means on or off / true or false
 var activated;
+//Funktion für das Löschen des recorded Beats/ removing items from the array recordedBeat/ recordedBeat.length ist die Anzahl 
+//an aufgenommenen sounds
+function deletingTheBeat() {
+    beat.splice(0, beat.length);
+    console.log(beat.length);
+}
 //ClickEvent für den RecordButton 
 document.querySelector(".RecordButton").addEventListener("click", function () {
     deletingTheBeat;
@@ -41,18 +47,13 @@ document.querySelector(".RecordButton").addEventListener("click", function () {
     }
     recordingTheBeat;
     console.log(activated);
+    console.log(beat.length);
 });
 //ClickEvent für den DeleteButton 
 document.querySelector(".DeleteButton").addEventListener("click", function () {
     deletingTheBeat();
     console.log(beat.length);
 });
-//Funktion für das Löschen des recorded Beats/ removing items from the array recordedBeat/ recordedBeat.length ist die Anzahl 
-//an aufgenommenen sounds
-function deletingTheBeat() {
-    beat.splice(0, beat.length);
-    console.log(beat.length);
-}
 //Funktion für's Recording/ Wenn die activated = true wird recorded 
 function recordingTheBeat(button) {
     console.log(activated);

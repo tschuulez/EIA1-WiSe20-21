@@ -46,6 +46,14 @@ var beat: HTMLAudioElement [] = [button6, button9, button5];
 var activated: boolean;
 
 
+ //Funktion für das Löschen des recorded Beats/ removing items from the array recordedBeat/ recordedBeat.length ist die Anzahl 
+//an aufgenommenen sounds
+ 
+function deletingTheBeat () {
+    beat.splice(0, beat.length);
+    console.log(beat.length);
+}
+
 //ClickEvent für den RecordButton 
 document.querySelector(".RecordButton").addEventListener("click", () => {
 
@@ -61,6 +69,7 @@ document.querySelector(".RecordButton").addEventListener("click", () => {
     }
     recordingTheBeat;
     console.log(activated);
+    console.log(beat.length);
 });
 
 
@@ -71,13 +80,7 @@ document.querySelector(".DeleteButton").addEventListener("click", () => {
      console.log(beat.length);
  });
 
- //Funktion für das Löschen des recorded Beats/ removing items from the array recordedBeat/ recordedBeat.length ist die Anzahl 
-//an aufgenommenen sounds
- 
-function deletingTheBeat () {
-    beat.splice(0, beat.length);
-    console.log(beat.length);
-}
+
 
 //Funktion für's Recording/ Wenn die activated = true wird recorded 
 
