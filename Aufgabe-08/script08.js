@@ -76,7 +76,7 @@ document.querySelector(".PlayButton").addEventListener("click", function () {
         else {
             index = 0;
         }
-    }, 600);
+    }, 500);
     if (playButton.classList.contains("inactive")) {
         playButton.classList.remove("inactive");
         stopButton.classList.add("inactive");
