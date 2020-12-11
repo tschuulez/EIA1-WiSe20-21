@@ -1,3 +1,4 @@
+
 var button1: HTMLAudioElement = new Audio("assets/A.mp3");
 
 var button2: HTMLAudioElement = new Audio("assets/C.mp3");
@@ -67,7 +68,7 @@ document.querySelector(".RecordButton").addEventListener("click", () => {
         activated = true;
     }
     
-    recordingTheBeat;
+    //recordingTheBeat;
 
     console.log(activated);
     console.log(beat.length);

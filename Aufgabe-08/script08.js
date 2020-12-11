@@ -44,7 +44,7 @@ document.querySelector(".RecordButton").addEventListener("click", function () {
         recordButton.classList.add("ichWurdeGeklickt");
         activated = true;
     }
-    recordingTheBeat;
+    //recordingTheBeat;
     console.log(activated);
     console.log(beat.length);
 });
