@@ -1,5 +1,4 @@
 
-
 const trashIcon: HTMLElement = document.querySelector(".fas fa-trash-alt");
 
 let listIndex: number = 0;
