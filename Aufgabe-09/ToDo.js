@@ -5,6 +5,9 @@ var liElement = document.querySelector(".element");
 function anzahl() {
     document.querySelector("h3").innerHTML = listIndex + " in total";
 }
+function emptyInputField() {
+    document.getElementById("addNewTasks").value = "";
+}
 function createElement() {
     var myLi = document.createElement("li");
     myLi.className = "element";
@@ -39,11 +42,12 @@ function createElement() {
 }
 document.querySelector(".add").addEventListener("click", function () {
     createElement();
+    emptyInputField();
 });
 newTask.addEventListener("keypress", function (e) {
     if (e.code === "Enter") {
         createElement();
-        //console.log(list.length);
+        emptyInputField();
     }
 });
 //# sourceMappingURL=ToDo.js.map

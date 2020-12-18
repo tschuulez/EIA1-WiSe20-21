@@ -29,7 +29,7 @@ function createElement (): void {
     let checkedIcon: HTMLElement = document.createElement("i");
     checkedIcon.className = "fas fa-check hidden";
     
-
+    
     
     document.querySelector("#myList").appendChild(myLi);
     myLi.appendChild(trashIcon);
@@ -66,6 +66,7 @@ document.querySelector(".add").addEventListener("click", function(): void {
     createElement();
     emptyInputField();
     
+    
 });
 
 
@@ -76,6 +77,7 @@ newTask.addEventListener("keypress", (e) => {
     if (e.code === "Enter") {
         createElement();
         emptyInputField();
+        
     }
 
 });
