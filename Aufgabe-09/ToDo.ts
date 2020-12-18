@@ -4,7 +4,7 @@ const trashIcon: HTMLElement = document.querySelector(".fas fa-trash-alt");
 let listIndex: number = 0;
 
 
-let newTask: any = document.querySelector("#addNewTasks");
+let newTask: HTMLInputElement = document.querySelector("#addNewTasks");
 
 const liElement: HTMLElement = document.querySelector(".element");
 
@@ -14,7 +14,7 @@ function anzahl(): void {
 
 
 function emptyInputField(): void {
-    newTask.value = "";
+    (<HTMLInputElement>document.getElementById("addNewTasks")).value = "";
 } 
 
 function createElement (): void {
