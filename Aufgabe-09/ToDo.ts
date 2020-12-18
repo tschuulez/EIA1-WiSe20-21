@@ -4,7 +4,7 @@ const trashIcon: HTMLElement = document.querySelector(".fas fa-trash-alt");
 let listIndex: number = 0;
 
 
-const newTask: any = document.querySelector("#addNewTasks");
+let newTask: any = document.querySelector("#addNewTasks");
 
 const liElement: HTMLElement = document.querySelector(".element");
 
@@ -13,7 +13,9 @@ function anzahl(): void {
 }
 
 
-
+function emptyInputField(): void {
+    newTask.value = "";
+} 
 
 function createElement (): void {
     let myLi: HTMLElement = document.createElement("li");
@@ -62,13 +64,18 @@ function createElement (): void {
 document.querySelector(".add").addEventListener("click", function(): void {
     
     createElement();
+    emptyInputField();
     
 });
+
+
+
+
 
 newTask.addEventListener("keypress", (e) => {
     if (e.code === "Enter") {
         createElement();
-        //console.log(list.length);
+        emptyInputField();
     }
 
 });
