@@ -1,6 +1,6 @@
 //var todosText: string[] =       ["Lorem" , "Ipsum" , "Dolor"];
 //var todosChecked: boolean[] =    [true    , false   , false];
-var toDoList = [
+var toDoList10 = [
     {
         todosText: "Kochen",
         todosChecked: true
@@ -25,8 +25,8 @@ var inputDOMElement;
 var addButtonDOMElement;
 var todosDOMElement;
 var counterDOMElement;
-var doneDOMElement;
-var openDOMElement;
+var doneDOMElement10;
+var openDOMElement10;
 /**
  * Sobald der DOM geladen wurde können grundlegende DOM-Interaktionen
  * initialisiert werden
@@ -54,7 +54,7 @@ window.addEventListener("load", function () {
      */
     drawListToDOM();
 });
-function drawListToDOM() {
+function drawListToDOM10() {
     // alle todos erst einmal aus dem DOM löschen
     todosDOMElement.innerHTML = "";
     var _loop_1 = function (index_1) {
@@ -81,12 +81,12 @@ function drawListToDOM() {
         todo.querySelector(".check").addEventListener("click", function () {
             // hier wird der Index, also die aktuelle Stelle im Array dieses ToDos,
             // übergeben, damit an der entsprechenden Stelle im Array der Wert geändert werden kann.
-            toggleCheckState(index_1);
+            toggleCheckState10(index_1);
         });
         todo.querySelector(".trash").addEventListener("click", function () {
             // hier wird der Index, also die aktuelle Stelle im Array dieses ToDos,
             // übergeben, damit die entsprechende Stelle im Array gelöscht werden kann.
-            deleteTodo(index_1);
+            deleteTodo10(index_1);
         });
         // Bis hier hin wurde das neue Todo "zusammengebaut", jetzt wird es in den DOM gerendert.
         todosDOMElement.appendChild(todo);
@@ -95,9 +95,9 @@ function drawListToDOM() {
     for (var index_1 = 0; index_1 < toDoList.length; index_1++) {
         _loop_1(index_1);
     }
-    updateCounter();
+    updateCounter10();
 }
-function updateCounter() {
+function updateCounter10() {
     var open = 0;
     var done = 0;
     for (var index_2 = 0; index_2 < toDoList.length; index_2++) {
@@ -108,13 +108,13 @@ function updateCounter() {
             (open++);
     }
     counterDOMElement.innerHTML = toDoList.length + " in total";
-    doneDOMElement.innerHTML = done + " done tasks";
-    openDOMElement.innerHTML = open + " tasks still open";
+    doneDOMElement10.innerHTML = done + " done tasks";
+    openDOMElement10.innerHTML = open + " tasks still open";
 }
 /**
  * Ein neues ToDo wird folgendermaßen erstellt:
  */
-function addTodo() {
+function addTodo10() {
     /**
      * Zunächst wird geprüft, ob das Input-Feld nicht leer ist
      * (ansonsten würde ein leerer ToDo-Text erstellt werden,
@@ -146,7 +146,7 @@ function addTodo() {
 /**
  * Der check- / unchecked Zustand eines ToDo wird wie folgt gesetzt:
  */
-function toggleCheckState(index) {
+function toggleCheckState10(index) {
     /**
      * Das Array, , das den Checked- / Uncheck-Status der ToDos abbildet,
      * muss an jener Stelle, an der das entsprechende ToDo steht (nämlich
@@ -170,7 +170,7 @@ function toggleCheckState(index) {
 /**
  * Diese Funktion löscht ein ToDo
  */
-function deleteTodo(index) {
+function deleteTodo10(index) {
     /**
      * Durch "index" ist die entsprechende Stelle im Array
      * bekannt, an der das ToDo steht.
@@ -184,4 +184,4 @@ function deleteTodo(index) {
      */
     drawListToDOM();
 }
-//# sourceMappingURL=script.js.map
+//# sourceMappingURL=script11.js.map
