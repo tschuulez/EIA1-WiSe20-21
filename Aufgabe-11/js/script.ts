@@ -1,4 +1,4 @@
-
+namespace aufgabe11 { 
 
 interface ToDos {
     todosText: string;
@@ -214,4 +214,5 @@ function deleteTodo(index: number): void {
      * wird wieder getriggert
      */
     drawListToDOM();
+}
 }
