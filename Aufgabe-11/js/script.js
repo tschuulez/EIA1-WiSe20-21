@@ -1,7 +1,5 @@
 var aufgabe11;
 (function (aufgabe11) {
-    //var todosText: string[] =       ["Lorem" , "Ipsum" , "Dolor"];
-    //var todosChecked: boolean[] =    [true    , false   , false];
     var toDoList = [
         {
             todosText: "Kochen",
@@ -16,13 +14,6 @@ var aufgabe11;
             todosChecked: false
         }
     ];
-    /**
-     * Die Anwendung wird immer wieder auf die selben
-     * DOM-Elemente zugreifen müssen. Damit diese Elemente nicht
-     * jedes mal neu selektiert werden müssen, werden hier
-     * Variablen deklariert, die später die entsprechenden DOM-Elemente
-     * speichern.
-     */
     var inputDOMElement;
     var addButtonDOMElement;
     var todosDOMElement;
@@ -45,15 +36,7 @@ var aufgabe11;
         counterDOMElement = document.querySelector("#counter");
         openDOMElement = document.querySelector("#open");
         doneDOMElement = document.querySelector("#done");
-        /**
-         * Jetzt da der DOM verfügbar ist kann auch ein Event-Listener
-         * auf den AddToDo Button gesetzt werden.
-         */
         addButtonDOMElement.addEventListener("click", addTodo);
-        /**
-         * Initial soll einmal die Liste an bereit definierten ToDos
-         * aus den Arrays in den DOM gezeichnet werden.
-         */
         drawListToDOM();
     });
     function drawListToDOM() {
@@ -187,4 +170,40 @@ var aufgabe11;
         drawListToDOM();
     }
 })(aufgabe11 || (aufgabe11 = {}));
+window.addEventListener("load", function () {
+    var artyom = new Artyom();
+    artyom.addCommands({
+        indexes: ["erstelle Aufgabe *"],
+        smart: true,
+        action: function (i, wildcard) {
+            console.log("Neue Aufgabe wird erstellt: " + wildcard);
+            console.log(wildcard);
+            toDoList.unshift({
+                todosText: wildcard,
+                todosChecked: false
+            });
+            drawListToDOM();
+        }
+    });
+    function startRecording() {
+        artyom.initialize({
+            lang: "de-DE",
+            continuous: true,
+            listen: true,
+            interimResults: true,
+            debug: true
+        });
+    }
+    function stopRecording() {
+        artyom.fatality();
+    }
+    document.getElementById("startRecording").addEventListener("click", function () {
+        startRecording();
+        artyom.say("Sage ERSTELLE AUFGABE und es wird deiner Liste hinzugefügt");
+    });
+    document.getElementById("stopRecording").addEventListener("click", function () {
+        stopRecording();
+        artyom.say("deine Spracheingabe ist jetzt zu Ende");
+    });
+});
 //# sourceMappingURL=script.js.map

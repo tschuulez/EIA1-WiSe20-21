@@ -43,6 +43,44 @@ main {
 #addButton:hover {
     color: black;
 }
+.buttonBox{
+    height: 50px;
+    width: 80px;
+    position: relative;
+
+    top: 14%;
+    right: 30%;
+
+}
+.fa-microphone-alt-slash{
+    position: absolute;
+    right: 50px;
+    top: 5px;
+    font-size: 30px;
+    background: none;
+    border: none;
+    outline: none;
+    color: grey;
+    cursor: pointer;
+}
+.fa-microphone-alt-slash:hover{
+    color: black;
+}
+.fa-microphone-alt{
+    position: absolute;
+    right: 100px;
+    top: 5px;
+    font-size: 30px;
+    background: none;
+    border: none;
+    outline: none;
+    color: grey;
+    cursor: pointer;
+
+}
+.fa-microphone-alt:hover{
+    color: black;
+}
 
 #todos {
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.42);

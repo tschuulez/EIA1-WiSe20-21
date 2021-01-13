@@ -7,18 +7,26 @@
     <title>ToDo App</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <link rel="stylesheet" href="css/styles.css">
-    <script src="js/script.js"></script>
+    <script src="js/script.js " defer></script>
+    <script src="js/libs/artyom.window.min.js"></script>
 </head>
 <body>
     <main>
         <h1>ToDo App</h1>
+        
         <p id="counter">3 in total</p>
         <p id="done">1 done</p>
         <p id="open">2 open</p>
 
+        <div class="buttonBox">
+            <div id="startRecording"><i class="fas fa-microphone-alt"></i></div> 
+            <div id="stopRecording"> <i class="fas fa-microphone-alt-slash"></i></div> 
+        </div>
+
         <div class="inputGroup">
             <input type="text" id="inputTodo" placeholder="Add another task">
             <button id="addButton"><i class="fas fa-plus-circle"></i></button>
+            
         </div>
 
         <div id="todos"></div>

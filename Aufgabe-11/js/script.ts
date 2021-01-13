@@ -4,8 +4,6 @@ interface ToDos {
     todosText: string;
     todosChecked: boolean;
 }
-//var todosText: string[] =       ["Lorem" , "Ipsum" , "Dolor"];
-//var todosChecked: boolean[] =    [true    , false   , false];
 
 let toDoList: ToDos[] = [
     {
@@ -23,13 +21,7 @@ let toDoList: ToDos[] = [
 ]; 
   
 
-/**
- * Die Anwendung wird immer wieder auf die selben
- * DOM-Elemente zugreifen müssen. Damit diese Elemente nicht 
- * jedes mal neu selektiert werden müssen, werden hier
- * Variablen deklariert, die später die entsprechenden DOM-Elemente
- * speichern.
- */
+
 var inputDOMElement: HTMLInputElement;
 var addButtonDOMElement: HTMLElement;
 var todosDOMElement: HTMLElement;
@@ -55,16 +47,10 @@ window.addEventListener("load", function(): void {
     openDOMElement = document.querySelector("#open");
     doneDOMElement = document.querySelector("#done");
 
-    /**
-     * Jetzt da der DOM verfügbar ist kann auch ein Event-Listener
-     * auf den AddToDo Button gesetzt werden.
-     */
+   
     addButtonDOMElement.addEventListener("click", addTodo);
 
-    /**
-     * Initial soll einmal die Liste an bereit definierten ToDos
-     * aus den Arrays in den DOM gezeichnet werden.
-     */
+    
     drawListToDOM();
 });
 
@@ -216,3 +202,50 @@ function deleteTodo(index: number): void {
     drawListToDOM();
 }
 }
+
+declare var Artyom: any;
+
+window.addEventListener("load", function (): void {
+
+    const artyom: any = new Artyom();
+    artyom.addCommands({
+        indexes: ["erstelle Aufgabe *"],
+        smart: true,
+        action: function (i: any, wildcard: string): void {
+            console.log("Neue Aufgabe wird erstellt: " + wildcard);
+            console.log(wildcard);
+            
+            toDoList.unshift( 
+                {
+                todosText: wildcard,
+                todosChecked: false
+                });
+            drawListToDOM();
+        
+        }
+    });
+
+    function startRecording(): void {
+        artyom.initialize({
+            lang: "de-DE",
+            continuous: true,
+            listen: true,
+            interimResults: true,
+            debug: true
+        });
+    }
+
+    function stopRecording(): void {
+        artyom.fatality();
+    }
+    document.getElementById("startRecording").addEventListener("click", function (): void {
+        startRecording();
+        artyom.say("Sage ERSTELLE AUFGABE und es wird deiner Liste hinzugefügt");
+    });
+    document.getElementById("stopRecording").addEventListener("click", function (): void {
+        stopRecording();
+        artyom.say("deine Spracheingabe ist jetzt zu Ende");
+    });
+});
+
+
