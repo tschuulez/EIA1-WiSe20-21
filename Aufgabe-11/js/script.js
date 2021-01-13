@@ -1,6 +1,6 @@
 var aufgabe11;
 (function (aufgabe11) {
-    var toDoList = [
+    var todolist = [
         {
             todosText: "Kochen",
             todosChecked: true
@@ -25,11 +25,6 @@ var aufgabe11;
      * initialisiert werden
      */
     window.addEventListener("load", function () {
-        /**
-         * Jetzt da der DOM verfügbar ist können die wichtigsten Elemente
-         * in ihre Variablen gespeichert werden, um später auf sie
-         * zugreifen zu können
-         */
         inputDOMElement = document.querySelector("#inputTodo");
         addButtonDOMElement = document.querySelector("#addButton");
         todosDOMElement = document.querySelector("#todos");
@@ -43,10 +38,6 @@ var aufgabe11;
         // alle todos erst einmal aus dem DOM löschen
         todosDOMElement.innerHTML = "";
         var _loop_1 = function (index_1) {
-            /**
-             * Neues DIV-Element erstellen (würde auch mit innerHTML = "<div class='todo'></div>" gehen,
-             * die Objekt-Instansierung ist aber übersichtlicher)
-             */
             var todo = document.createElement("div");
             todo.classList.add("todo");
             /**
@@ -59,8 +50,8 @@ var aufgabe11;
              * ein Wert einer Variablen benötigt (bspw. für die CSS Klasse oder für den ToDo-Text),
              * hier muss die Zeichenkette unterbrochen werden.
              */
-            todo.innerHTML = "<span class='check " + toDoList[index_1].todosChecked + "'><i class='fas fa-check'></i></span>"
-                + toDoList[index_1].todosText +
+            todo.innerHTML = "<span class='check " + todolist[index_1].todosChecked + "'><i class='fas fa-check'></i></span>"
+                + todolist[index_1].todosText +
                 "<span class='trash fas fa-trash-alt'></span>";
             // Zuweisen der Event-Listener für den Check- und den Trash-Button
             todo.querySelector(".check").addEventListener("click", function () {
@@ -77,7 +68,7 @@ var aufgabe11;
             todosDOMElement.appendChild(todo);
         };
         // das ToDo-Array durchlaufen (iterieren) und Todo für Todo in den DOM schreiben
-        for (var index_1 = 0; index_1 < toDoList.length; index_1++) {
+        for (var index_1 = 0; index_1 < todolist.length; index_1++) {
             _loop_1(index_1);
         }
         updateCounter();
@@ -85,14 +76,14 @@ var aufgabe11;
     function updateCounter() {
         var open = 0;
         var done = 0;
-        for (var index_2 = 0; index_2 < toDoList.length; index_2++) {
-            if (toDoList[index_2].todosChecked == true) {
+        for (var index_2 = 0; index_2 < todolist.length; index_2++) {
+            if (todolist[index_2].todosChecked == true) {
                 done++;
             }
             else
                 (open++);
         }
-        counterDOMElement.innerHTML = toDoList.length + " in total";
+        counterDOMElement.innerHTML = todolist.length + " in total";
         doneDOMElement.innerHTML = done + " done tasks";
         openDOMElement.innerHTML = open + " tasks still open";
     }
@@ -115,7 +106,7 @@ var aufgabe11;
              */
             //todosText.push(inputDOMElement.value);
             //todosChecked.push(false);
-            toDoList.unshift({
+            todolist.unshift({
                 todosText: inputDOMElement.value,
                 todosChecked: false
             });
@@ -132,78 +123,52 @@ var aufgabe11;
      * Der check- / unchecked Zustand eines ToDo wird wie folgt gesetzt:
      */
     function toggleCheckState(index) {
-        /**
-         * Das Array, , das den Checked- / Uncheck-Status der ToDos abbildet,
-         * muss an jener Stelle, an der das entsprechende ToDo steht (nämlich
-         * an der übergebenen Index-Stelle) geändert werden.
-         * Von checked zu unchecked bzw. von unchecked zu checked
-         * Hier wird ein Boolean für den Zustand checked/unchecked genutzt,
-         * der Boolean muss also von true zu false bzw. false zu true gestellt werden.
-         * Ein toggle (also Welchseln zwischen zwei Zuständen) lässt sich folgendermaßen
-         * kurz schreiben: wert = !wert
-         * Bedeutet: der Wert soll das Gegenteil von seinem Wert annehmen.
-         * Alternativ könnte man hier natürlich auch andere Schreibweisen (wie sie im
-         * Kurs behandelt wurden) nutzen.
-         */
-        toDoList[index].todosChecked = !toDoList[index].todosChecked;
+        todolist[index].todosChecked = !todolist[index].todosChecked;
         /**
          * Die zentrale Funktion, um die Liste des ToDo-Arrays in den DOM zu rendern
          * wird wieder getriggert
          */
         drawListToDOM();
     }
-    /**
-     * Diese Funktion löscht ein ToDo
-     */
     function deleteTodo(index) {
-        /**
-         * Durch "index" ist die entsprechende Stelle im Array
-         * bekannt, an der das ToDo steht.
-         * Jetzt muss diese Stelle beider Arrays gelöscht werden,
-         * das ToDo-Text-Array und das Checked/Unchecked-Array
-         */
-        toDoList.splice(index, 1);
-        /**
-         * Die zentrale Funktion, um die Liste des ToDo-Arrays in den DOM zu rendern
-         * wird wieder getriggert
-         */
+        todolist.splice(index, 1);
         drawListToDOM();
     }
-})(aufgabe11 || (aufgabe11 = {}));
-window.addEventListener("load", function () {
-    var artyom = new Artyom();
-    artyom.addCommands({
-        indexes: ["erstelle Aufgabe *"],
-        smart: true,
-        action: function (i, wildcard) {
-            console.log("Neue Aufgabe wird erstellt: " + wildcard);
-            console.log(wildcard);
-            toDoList.unshift({
-                todosText: wildcard,
-                todosChecked: false
-            });
-            drawListToDOM();
-        }
-    });
-    function startRecording() {
-        artyom.initialize({
-            lang: "de-DE",
-            continuous: true,
-            listen: true,
-            interimResults: true,
-            debug: true
+    window.addEventListener("load", function () {
+        var artyom = new Artyom();
+        artyom.addCommands({
+            indexes: ["erstelle Aufgabe *"],
+            smart: true,
+            action: function (i, wildcard) {
+                console.log("Neue Aufgabe wird erstellt: " + wildcard);
+                console.log(wildcard);
+                todolist.unshift({
+                    todosText: wildcard,
+                    todosChecked: false
+                });
+                drawListToDOM();
+                console.log("Neue Aufgabe wird erstellt: " + wildcard);
+            }
         });
-    }
-    function stopRecording() {
-        artyom.fatality();
-    }
-    document.getElementById("startRecording").addEventListener("click", function () {
-        startRecording();
-        artyom.say("Sage ERSTELLE AUFGABE und es wird deiner Liste hinzugefügt");
+        function startRecording() {
+            artyom.initialize({
+                lang: "de-DE",
+                continuous: true,
+                listen: true,
+                interimResults: true,
+                debug: true
+            });
+        }
+        function stopRecording() {
+            artyom.fatality();
+        }
+        document.getElementById("startRecording").addEventListener("click", function () {
+            startRecording();
+        });
+        document.getElementById("stopRecording").addEventListener("click", function () {
+            stopRecording();
+            artyom.say("deine Spracheingabe ist jetzt zu Ende");
+        });
     });
-    document.getElementById("stopRecording").addEventListener("click", function () {
-        stopRecording();
-        artyom.say("deine Spracheingabe ist jetzt zu Ende");
-    });
-});
+})(aufgabe11 || (aufgabe11 = {}));
 //# sourceMappingURL=script.js.map

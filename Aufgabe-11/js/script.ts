@@ -5,7 +5,7 @@ interface ToDos {
     todosChecked: boolean;
 }
 
-let toDoList: ToDos[] = [
+let todolist: ToDos[] = [
     {
         todosText: "Kochen",
         todosChecked: true
@@ -22,10 +22,10 @@ let toDoList: ToDos[] = [
   
 
 
-var inputDOMElement: HTMLInputElement;
-var addButtonDOMElement: HTMLElement;
-var todosDOMElement: HTMLElement;
-var counterDOMElement: HTMLElement;
+let inputDOMElement: HTMLInputElement;
+let addButtonDOMElement: HTMLElement;
+let todosDOMElement: HTMLElement;
+let counterDOMElement: HTMLElement;
 let doneDOMElement: HTMLElement;
 let openDOMElement: HTMLElement;
 
@@ -35,11 +35,7 @@ let openDOMElement: HTMLElement;
  */
 window.addEventListener("load", function(): void {
 
-    /**
-     * Jetzt da der DOM verfügbar ist können die wichtigsten Elemente
-     * in ihre Variablen gespeichert werden, um später auf sie 
-     * zugreifen zu können
-     */
+    
     inputDOMElement = document.querySelector("#inputTodo");
     addButtonDOMElement = document.querySelector("#addButton");
     todosDOMElement = document.querySelector("#todos");
@@ -59,12 +55,9 @@ function drawListToDOM(): void {
     todosDOMElement.innerHTML = "";
 
     // das ToDo-Array durchlaufen (iterieren) und Todo für Todo in den DOM schreiben
-    for (let index: number = 0; index < toDoList.length; index++) {
+    for (let index: number = 0; index < todolist.length; index++) {
 
-        /**
-         * Neues DIV-Element erstellen (würde auch mit innerHTML = "<div class='todo'></div>" gehen, 
-         * die Objekt-Instansierung ist aber übersichtlicher)
-         */
+       
         let todo: HTMLElement = document.createElement("div");
         todo.classList.add("todo");
 
@@ -78,8 +71,8 @@ function drawListToDOM(): void {
          * ein Wert einer Variablen benötigt (bspw. für die CSS Klasse oder für den ToDo-Text),
          * hier muss die Zeichenkette unterbrochen werden.
          */
-        todo.innerHTML =  "<span class='check " + toDoList[index].todosChecked + "'><i class='fas fa-check'></i></span>"
-                            + toDoList[index].todosText +
+        todo.innerHTML =  "<span class='check " + todolist[index].todosChecked + "'><i class='fas fa-check'></i></span>"
+                            + todolist[index].todosText +
                             "<span class='trash fas fa-trash-alt'></span>";
 
         // Zuweisen der Event-Listener für den Check- und den Trash-Button
@@ -105,8 +98,8 @@ function updateCounter(): void {
     let open: number = 0; 
     let done: number = 0;
 
-    for (let index: number = 0; index < toDoList.length; index++) {
-        if ( toDoList[index].todosChecked == true) {
+    for (let index: number = 0; index < todolist.length; index++) {
+        if ( todolist[index].todosChecked == true) {
             done ++;
         }
         else (
@@ -114,7 +107,7 @@ function updateCounter(): void {
         );
     }
     
-    counterDOMElement.innerHTML = toDoList.length + " in total";
+    counterDOMElement.innerHTML = todolist.length + " in total";
     doneDOMElement.innerHTML = done + " done tasks";
     openDOMElement.innerHTML = open + " tasks still open";
 
@@ -140,7 +133,7 @@ function addTodo(): void {
          */
         //todosText.push(inputDOMElement.value);
         //todosChecked.push(false);
-        toDoList.unshift({
+        todolist.unshift({
             todosText: inputDOMElement.value,
             todosChecked: false
         });
@@ -160,48 +153,24 @@ function addTodo(): void {
  */
 function toggleCheckState(index: number): void {
 
-    /**
-     * Das Array, , das den Checked- / Uncheck-Status der ToDos abbildet,
-     * muss an jener Stelle, an der das entsprechende ToDo steht (nämlich
-     * an der übergebenen Index-Stelle) geändert werden.
-     * Von checked zu unchecked bzw. von unchecked zu checked
-     * Hier wird ein Boolean für den Zustand checked/unchecked genutzt,
-     * der Boolean muss also von true zu false bzw. false zu true gestellt werden.
-     * Ein toggle (also Welchseln zwischen zwei Zuständen) lässt sich folgendermaßen
-     * kurz schreiben: wert = !wert
-     * Bedeutet: der Wert soll das Gegenteil von seinem Wert annehmen.
-     * Alternativ könnte man hier natürlich auch andere Schreibweisen (wie sie im
-     * Kurs behandelt wurden) nutzen.
-     */
-    toDoList[index].todosChecked = !toDoList[index].todosChecked;
-
-    /**
-     * Die zentrale Funktion, um die Liste des ToDo-Arrays in den DOM zu rendern
-     * wird wieder getriggert
-     */
-    drawListToDOM();
-}
-
-/**
- * Diese Funktion löscht ein ToDo
- */
-function deleteTodo(index: number): void {
-    /**
-     * Durch "index" ist die entsprechende Stelle im Array
-     * bekannt, an der das ToDo steht.
-     * Jetzt muss diese Stelle beider Arrays gelöscht werden,
-     * das ToDo-Text-Array und das Checked/Unchecked-Array
-     */
-    toDoList.splice(index, 1);
-   
     
+    todolist[index].todosChecked = !todolist[index].todosChecked;
+
     /**
      * Die zentrale Funktion, um die Liste des ToDo-Arrays in den DOM zu rendern
      * wird wieder getriggert
      */
     drawListToDOM();
 }
+
+
+function deleteTodo(index: number): void {
+    
+    todolist.splice(index, 1);
+   
+    drawListToDOM();
 }
+
 
 declare var Artyom: any;
 
@@ -215,12 +184,13 @@ window.addEventListener("load", function (): void {
             console.log("Neue Aufgabe wird erstellt: " + wildcard);
             console.log(wildcard);
             
-            toDoList.unshift( 
+            todolist.unshift( 
                 {
                 todosText: wildcard,
                 todosChecked: false
                 });
             drawListToDOM();
+            console.log("Neue Aufgabe wird erstellt: " + wildcard);
         
         }
     });
@@ -240,7 +210,7 @@ window.addEventListener("load", function (): void {
     }
     document.getElementById("startRecording").addEventListener("click", function (): void {
         startRecording();
-        artyom.say("Sage ERSTELLE AUFGABE und es wird deiner Liste hinzugefügt");
+        
     });
     document.getElementById("stopRecording").addEventListener("click", function (): void {
         stopRecording();
@@ -248,4 +218,4 @@ window.addEventListener("load", function (): void {
     });
 });
 
-
+}

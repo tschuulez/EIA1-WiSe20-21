@@ -1,5 +1,5 @@
 
-
+namespace aufgabe10{
 interface ToDos {
     todosText: string;
     todosChecked: boolean;
@@ -214,4 +214,5 @@ function deleteTodo(index: number): void {
      * wird wieder getriggert
      */
     drawListToDOM();
+}
 }
