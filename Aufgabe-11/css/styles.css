@@ -47,12 +47,12 @@ main {
     height: 50px;
     width: 80px;
     position: relative;  
+    top: 20%;
+    padding-left: 42%;
 
 }
 .fa-microphone-alt-slash{
-    position: absolute;
-    right: 51%;
-    top: 28%;
+    position: relative;
     font-size: 30px;
     background: none;
     border: none;
@@ -64,9 +64,8 @@ main {
     color: black;
 }
 .fa-microphone-alt{
-    position: absolute;
-    right: 48%;
-    top: 28%;
+    position: relative;
+    
     font-size: 30px;
     background: none;
     border: none;
