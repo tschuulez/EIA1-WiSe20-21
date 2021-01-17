@@ -51,8 +51,8 @@ main {
 }
 .fa-microphone-alt-slash{
     position: absolute;
-    right: 50px;
-    top: 5px;
+    right: 51%;
+    top: 28%;
     font-size: 30px;
     background: none;
     border: none;
@@ -65,8 +65,8 @@ main {
 }
 .fa-microphone-alt{
     position: absolute;
-    right: 100px;
-    top: 5px;
+    right: 48%;
+    top: 28%;
     font-size: 30px;
     background: none;
     border: none;
