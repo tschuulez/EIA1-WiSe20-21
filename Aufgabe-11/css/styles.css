@@ -2,22 +2,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     background: rgb(73, 71, 71);
 }
-#startRecording {
-    top: 50px;
-    font-size: 60px;
-    margin-bottom: 25px;
-    color: #555351;
-    margin-top: 15px;
-    margin-right: 30px;
-    }
-    
-#stopRecording {
-    top: 50px;
-    font-size: 60px;
-    margin-bottom: 25px;
-    margin-top: 15px;
-    color: #555351;
-} 
+
 main {
     width: 500px;
     margin: 0 auto;
@@ -58,8 +43,41 @@ main {
 #addButton:hover {
     color: black;
 }
+.buttonBox{
+    height: 50px;
+    width: 80px;
+    position: relative;  
 
+}
+.fa-microphone-alt-slash{
+    position: absolute;
+    right: 50px;
+    top: 5px;
+    font-size: 30px;
+    background: none;
+    border: none;
+    outline: none;
+    color: grey;
+    cursor: pointer;
+}
+.fa-microphone-alt-slash:hover{
+    color: black;
+}
+.fa-microphone-alt{
+    position: absolute;
+    right: 100px;
+    top: 5px;
+    font-size: 30px;
+    background: none;
+    border: none;
+    outline: none;
+    color: grey;
+    cursor: pointer;
 
+}
+.fa-microphone-alt:hover{
+    color: black;
+}
 
 #todos {
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.42);
