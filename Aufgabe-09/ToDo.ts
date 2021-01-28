@@ -8,8 +8,10 @@ let newTask: HTMLInputElement = document.querySelector("#addNewTasks");
 
 const liElement: HTMLElement = document.querySelector(".element");
 
-function anzahl(): void {
+function anzahl(): void { 
+
     document.querySelector("h3").innerHTML = listIndex + " in total";
+    
 }
 
 
@@ -18,6 +20,9 @@ function emptyInputField(): void {
 } 
 
 function createElement (): void {
+
+
+    
     let myLi: HTMLElement = document.createElement("li");
     myLi.className = "element";
     let trashIcon: HTMLElement = document.createElement("i");

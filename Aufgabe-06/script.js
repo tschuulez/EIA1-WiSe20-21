@@ -36,7 +36,7 @@ function myFunction(name, value18, valueRel, valueChange, valueGrowth) {
     document.querySelector(".h2_02").innerHTML = Math.round(value18 / total * 100) + "%";
     document.querySelector(".h2_03").innerHTML = valueChange + "%";
     document.querySelector(".h2_04").innerHTML = valueGrowth + "kg CO2";
-    document.querySelector(".chart").setAttribute('style', 'height:' + Math.round(value18 / total * 100) + "%");
+    document.querySelector(".chart").setAttribute("style", "height:" + Math.round(value18 / total * 100) + "%");
 }
 document.querySelector(".europe").addEventListener("click", myFunction.bind(null, "Europe", Europe18, EuropeRel, EuropeChange, EuropeGrowth));
 document.querySelector(".northamerica").addEventListener("click", myFunction.bind(null, "North America", NorthAmerica18, NorthAmericaRel, NorthAmericaChange, NorthAmericaGrowth));
